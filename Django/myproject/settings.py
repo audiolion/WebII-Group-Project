@@ -53,14 +53,33 @@ ROOT_URLCONF = 'myproject.urls'
 
 WSGI_APPLICATION = 'myproject.wsgi.application'
 
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, 'home/templates')],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'irregularexpressionsapp',
+        'USER': 'irregularexpressionsadmin',
+        'PASSWORD': os.environ['DB_PASSWORD'],
+        'HOST': 'web518.webfaction.com',
+        'PORT': '5432',
     }
 }
 
@@ -78,7 +97,13 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.7/howto/static-files/
+STATIC_ROOT = os.path.join(BASE_DIR, 'home', "static")
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    '/home/sl33t/webapps/irregularexpressionsapp/myproject/home/static',
+)
+
+MEDIA_URL = STATIC_URL + "media/"
+MEDIA_ROOT = os.path.join(STATIC_ROOT, "media")

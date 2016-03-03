@@ -20,7 +20,7 @@
   - People looking for a quick reference to solve a single problem involving regex
   - Gamified learning of regex
 
-##### Ranking of Goals
+##### Ranking of Goal
 1. 50 Pages of Dynamic Content related to regular expression learning
 2. Provide content across video, quizzes, reference material, diagrams
 3. Gamified learning

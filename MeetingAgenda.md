@@ -2,10 +2,10 @@
 8:30pm
 Reading Room
 
-1. Define Site Goals
+1. Define Site Goal
 2. Define User Experience
 
-##### Define Site Goals
+##### Define Site Goal
 
 Sounds obvious, but there are many websites that are created without a set of goals in mind. If you don't know what you want, certainly once the website is built it will not be what you want. One must know what they are trying to achieve when building a website.
 
