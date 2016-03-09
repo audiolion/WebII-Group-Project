@@ -24,19 +24,19 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
 
 INSTALLED_APPS = (
-    'home',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'home',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -97,11 +97,12 @@ USE_L10N = True
 USE_TZ = True
 
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'home', "static")
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticServe')
 
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'home', "static"),
     '/home/sl33t/webapps/irregularexpressionsapp/myproject/home/static',
 )
 
