@@ -1,11 +1,10 @@
 import datetime
-from django.db.models import Model
 
 from django.contrib.auth.models import User
-
+from django.db.models import Model
 from django.db.models.fields import IntegerField, CharField, DateField, BooleanField, TextField
 from django.db.models.fields.files import ImageField, FileField
-from django.db.models.fields.related import ManyToManyField, OneToOneField, ForeignKey
+from django.db.models.fields.related import ManyToManyField, OneToOneField
 
 
 class Badge(Model):
@@ -32,7 +31,7 @@ class Reply(Model):
 class Post(Model):
     user = OneToOneField(User)
     text = TextField()
-    #Upvote/Stars/Karma
+    # Upvote/Stars/Karma
     replies = ManyToManyField(Reply)
     date = DateField(default=datetime.date.today())
 
@@ -64,6 +63,6 @@ class Lesson(Model):
 class UserProfile(Model):
     user = OneToOneField(User)
     progress = IntegerField(default=0)
-    badges = ManyToManyField(Badge)
-    goals = ManyToManyField(Goal)
-    posts = ManyToManyField(Post)
+    badges = ManyToManyField(Badge, null=True, default=None)
+    goals = ManyToManyField(Goal, null=True, default=None)
+    posts = ManyToManyField(Post, null=True, default=None)

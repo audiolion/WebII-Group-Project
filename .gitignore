@@ -96,7 +96,7 @@ coverage.xml
 *.mo
 *.pot
 
-# Django stuff:
+# Django_Files stuff:
 *.log
 
 # Sphinx documentation
