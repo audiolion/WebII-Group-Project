@@ -43,7 +43,7 @@ class DateSelectorWidget(MultiWidget):
                 year=2000,
             )
         except ValueError:
-            print ValueError.message
+            print(ValueError.message)
             return ''
         else:
             return str(D)
