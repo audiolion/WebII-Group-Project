@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="/static/base.css">
     <title>{% block title %}{% endblock %}</title>
 </head>
@@ -14,14 +16,28 @@
 <ul class="messages">
     {% for message in messages %}
     <li
-    {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}
+    </li>
     {% endfor %}
 </ul>
 {% endif %}
+
+{% block nav %}
+
+{% endblock %}
+
 {% block content %}
 
 {% endblock %}
-<script type="text/javascript" src="https://code.jquery.com/jquery-git2.min.js"></script>
+
+{% block footer %}
+
+{% endblock %}
+<script src="https://code.jquery.com/jquery-2.2.1.min.js"
+        integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
 <script type="text/javascript" src="/static/base.js"></script>
 </body>
 </html>

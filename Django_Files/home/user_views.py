@@ -7,6 +7,7 @@ from django.shortcuts import render, redirect
 from .models import UserProfile
 from .forms import LoginForm, RegisterForm
 
+
 def login_view(request):
     if request.method == "POST":
         username = request.POST['username']
@@ -21,7 +22,7 @@ def login_view(request):
     else:
         return render(request, "form.html", {
             'form': LoginForm(),
-            "title": "Login"
+            "title": "IrregEx: Login"
         })
 
 
@@ -49,7 +50,7 @@ def register_view(request):
     else:
         return render(request, "form.html", {
             'form': RegisterForm(),
-            "title": "Register"
+            "title": "IrregEx: Register"
         })
 
 

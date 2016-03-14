@@ -7,8 +7,16 @@ from . import settings
 
 urlpatterns = [
                   url(r'^$', views.index),
+                  url(r'^lessons/$', views.lessons),
+                  url(r'^reference/$', views.reference),
+                  url(r'^forum/$', views.forum),
+                  url(r'^dashboard/$', views.dashboard),
+                  url(r'^language_tools/$', views.language_tools),
+                  url(r'^about_us/$', views.about_us),
+
                   url(r'^admin/', include(admin.site.urls)),
                   url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
+
                   url(r'^account/', include('django.contrib.auth.urls')),
                   url(r'^login/$', user_views.login_view, name='login'),
                   url(r'^register/$', user_views.register_view, name='register'),
