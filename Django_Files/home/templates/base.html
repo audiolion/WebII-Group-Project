@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {# COMMENT: Basic header jazz and bootstrap stuff #}
     <meta charset="UTF-8">
     {% load staticfiles %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,6 +14,7 @@
 </head>
 <body>
 {% if messages %}
+{# COMMENT: Messages are sent from the server to alert the user. Easier then a separate page #}
 <ul class="messages">
     {% for message in messages %}
     <li
@@ -23,16 +25,20 @@
 {% endif %}
 
 {% block nav %}
+{# COMMENT: Nav is optional so index doesn't need it #}
 
 {% endblock %}
 
 {% block content %}
+{# COMMENT: Main stuff goes here! #}
 
 {% endblock %}
 
 {% block footer %}
+{# COMMENT: Footer and such jazz #}
 
 {% endblock %}
+{# COMMENT: JQuery and Bootstrap JS here so they load last #}
 <script src="https://code.jquery.com/jquery-2.2.1.min.js"
         integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
