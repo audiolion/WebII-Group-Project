@@ -7,7 +7,7 @@ Regular Expressions, often shortened to Regex, are an algebra designed to match 
 ```
 But this is no different from any other symbolic language, like seeing the mathematical equation for the fundamental theorem of calculus.
 
-<img src="http://latex.codecogs.com/png.latex?F(x)&space;=&space;\int_{a}^{b}f(t)dt" title="F(x) = \int_{a}^{b}f(t)dt" />
+![F(x) = integral a to b of f(t) dt](http://latex.codecogs.com/png.latex?F(x)&amp;space;=&amp;space;\\int_{a}^{b}f(t)dt)
 
 To anyone who has never been exposed to mathematical symbols this is as incomprehensible as the regular expression above.
 
