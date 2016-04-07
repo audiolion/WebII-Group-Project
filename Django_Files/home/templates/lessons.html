@@ -7,4 +7,22 @@ IrregEx: Lessons
 {% endblock %}
 
 {% block content %}
+<div class="localNav">
+    {% for each_lesson in lessons %}
+        <a href="/lessons/{{ each_lesson.lesson_number }}">
+            <h3>{{ each_lesson.lesson_number }}. {{ each_lesson.title }}</h3>
+            <p>{{ each_lesson.description }}</p>
+        </a>
+    {% endfor %}
+</div>
+<div class="lesson">
+    <h2>{{ lesson.title }}</h2>
+    {% if lesson.video %}
+
+    {% endif %}
+    {% load markup_tags %}
+    {{ lesson.text|apply_markup:"markdown" }}
+
+    <a href="">Take Quiz</a>
+</div>
 {% endblock %}

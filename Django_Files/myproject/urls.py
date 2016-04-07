@@ -8,6 +8,7 @@ from . import settings
 urlpatterns = [
                   url(r'^$', views.index),
                   url(r'^lessons/$', views.lessons),
+                  url(r'^lessons/(?P<lesson_number>\w+)/$', views.lessons),
                   url(r'^reference/$', views.reference),
                   url(r'^forum/$', views.forum),
                   url(r'^dashboard/$', views.dashboard),
