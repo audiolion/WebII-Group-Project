@@ -99,7 +99,7 @@ In the above example it wouldn't matter if the text was written as 'qUeen', 'Que
 
 #### Wildcards
 
-Wildcards are an important concept in regex because often we don't care what character comes at a certain position in the string. Formally, the wildcard character is `.`, which means match any single character. We can combine the operators `+` and `*` with the `.` to match many wildcard characters. Specifically `*` matches 0 or more of the previous regex symbol, and `+` matches 1 or more of the previous symbol. The distinction is important if we want to ensure at least one character is in the position or not. Let's try a few examples.
+Wildcards are an important concept in regex because often we don't care what character comes at a certain position in the string. Formally, the wildcard character is `.`, which means match any single character. We can combine the operators `+` and `*` with the `.` to match many wildcard characters. Specifically `*` matches 0 or more of the previous regex symbol, and `+` matches 1 or more of the previous symbol. The distinction is important if we want to ensure at least one character is in the position or not. For completeness's sake, `.+` is equivalent to `.*.` or `..*` to make sure it is at least one character and then zero or more, but `.+` is cleaner, more readable and more efficient. Let's try a few examples.
 
 ```
 15 Grumpy wizards make toxic brew for the evil Queen and Jack.
@@ -142,7 +142,7 @@ Let's try to write a regular expression that matches an alphanumeric followed by
 
 Answer
 ```
-/[0-9].*make.*(evil|Queen).*a.../
+/[0-9].*make.*(evil|Queen).+a.../
 
 # breakdown
 
@@ -150,7 +150,7 @@ Answer
 [0-9]   # any digit
 .*      # zero or more characters until
 make    # the word make
-.*      # zero or more characters until
+.+      # one or more characters until
 (       # group
   evil  # evil
   |     # OR
