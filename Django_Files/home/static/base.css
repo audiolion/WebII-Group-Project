@@ -27,15 +27,17 @@ input, textarea, select {
     border-radius: 1rem;
 }
 
-button {
+form div {
+    text-align: center;
+}
+
+button, input[type="submit"] {
     background-color: #1E3D5E;
     color: #0c0c0c;
     border: .2rem solid #0c0c0c;
     padding: .5rem 1rem;
     border-radius: 1rem;
-    width: 9rem;
     margin-top: 1rem;
-    margin-left: calc(50% - 4rem);
 }
 
 .formLink {

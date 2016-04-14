@@ -11,7 +11,9 @@
     {% csrf_token %}
     <h2>{{ title }}</h2>
     {{ form }}
-    <button type="submit">Submit</button>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
 
     <div class="formLink">
         {% if "Login" in title %}
