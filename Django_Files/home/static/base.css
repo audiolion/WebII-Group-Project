@@ -9,6 +9,48 @@ body {
     background-color: #212322;
 }
 
+form {
+    width: 40%;
+    margin: 1rem auto;
+    background-color: white;
+    border-radius: 1rem;
+    padding: .2rem 1rem 1rem 1rem;
+    font-size: 1.8rem;
+    color:#0c0c0c;
+    border: .2rem solid #0c0c0c;
+    overflow: auto;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: .2rem .5rem;
+    border-radius: 1rem;
+}
+
+button {
+    background-color: #1E3D5E;
+    color: #0c0c0c;
+    border: .2rem solid #0c0c0c;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    width: 9rem;
+    margin-top: 1rem;
+    margin-left: calc(50% - 4rem);
+}
+
+.formLink {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.formLink a:first-child {
+    float: left;
+}
+
+.formLink a:nth-child(2) {
+    float: right;
+}
+
 .navbar-nav > li > a {
     color: #19BBBC !important;
 }

@@ -9,13 +9,17 @@
 {% block content %}
 <form action="" method="post" enctype="multipart/form-data">
     {% csrf_token %}
+    <h2>{{ title }}</h2>
     {{ form }}
     <button type="submit">Submit</button>
+
+    <div class="formLink">
+        {% if "Login" in title %}
+        <a href="/register" >Register?</a>
+        {% elif "Register" in title %}
+        <a href="/login">Login?</a>
+        {% endif %}
+        <a href="{% url 'django.contrib.auth.views.password_reset' %}">Forgot your password?</a>
+    </div>
 </form>
-{% if title == "Login" %}
-<a href="/register">Register?</a>
-{% elif title == "Register" %}
-<a href="/login">Login?</a>
-{% endif %}
-<a href="{% url 'django.contrib.auth.views.password_reset' %}">Forgot your password?</a>
 {% endblock %}
