@@ -28,7 +28,7 @@
   - Gamified learning of regex
 
 ##### Ranking of Short Term Goal
-1. Short term: 10 basic lessons on regex (video for at least 3)
+1. Short term: 10 basic lessons on regex (video for at least 3) (COMPLETE)
 2. UI/UX that is minimalistic and flows well to provide a good user experience
 3. Short term: 10 Quizes 3 questions each
 4. Short term: 15 quick reference explinations (COMPLETE)
