@@ -31,7 +31,7 @@
 1. Short term: 10 basic lessons on regex (video for at least 3)
 2. UI/UX that is minimalistic and flows well to provide a good user experience
 3. Short term: 10 Quizes 3 questions each
-4. Short term: 15 quick reference explinations
+4. Short term: 15 quick reference explinations (COMPLETE)
 5. Short term: 5 FAQ reference
 6. Short term: 5 small games which teach one concept of regex
 7. Short term: working basic code tester
@@ -41,7 +41,7 @@
 ##### Ranking of Long Term Goal
 1. Long term: 20 basic lessons on regex (video for at least 6)
 2. Long term: 20 Quizes 5 questions each
-3. Long term: 30 quick reference explinations
+3. Long term: 30 quick reference explinations (COMPLETE)
 4. Long term: 10 FAQ reference
 5. Long term: 10 small games which teach one concept of regex
 6. Long term: Interactive dynamic code tester

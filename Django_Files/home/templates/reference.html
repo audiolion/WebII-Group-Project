@@ -7,4 +7,134 @@ IrregEx: Reference
 {% endblock %}
 
 {% block content %}
+<div class="col-sm-12 reference">
+<h2>Quick Regex Reference</h2>
+
+
+<h3>Anchors</h3>
+<ul>
+    <li>^	Start of string, or start of line in multi-line pattern</li>
+    <li>\A	Start of string</li>
+    <li>$	End of string, or end of line in multi-line pattern</li>
+    <li>\Z	End of string</li>
+    <li>\<	Start of word</li>
+    <li>\>	End of word</li>
+</ul>
+
+
+<h3>Character Classes</h3>
+<ul>
+    <li>\c	Control character</li>
+    <li>\s	White space</li>
+    <li>\S	Not white space</li>
+    <li>\d	Digit</li>
+    <li>\D	Not digit</li>
+    <li>\w	Word</li>
+    <li>\W	Not word</li>
+    <li>\x	Hexade­cimal digit</li>
+    <li>\O	Octal digit</li>
+</ul>
+
+
+<h3>Special Characters</h3>
+<ul>
+    <li>\n	New line</li>
+    <li>\r	Carriage return</li>
+    <li>\t	Tab</li>
+    <li>\v	Vertical tab</li>
+    <li>\f	Form feed</li>
+    <li>\xxx	Octal character xxx</li>
+    <li>\xhh	Hex character hh</li>
+</ul>
+
+<h3>Assertions</h3>
+<ul>
+    <li>?=	Lookahead assertion</li>
+    <li>?!	Negative lookahead</li>
+    <li>?<=	Lookbehind assertion</li>
+    <li>?!= or ?<!	Negative lookbehind</li>
+    <li>?>	Once-only Subexp­ression</li>
+    <li>?()	Condition [if then]</li>
+    <li>?()|	Condition [if then else]</li>
+    <li>?#	Comment</li>
+</ul>
+
+
+<h3>Quanti­fiers</h3>
+<ul>
+    <li>*	0 or more</li>
+    <li>{N}	Exactly N(number)</li>
+    <li>+	1 or more</li>
+    <li>{N,}	N(number) or more</li>
+    <li>?	0 or 1</li>
+    <li>{3,5}	3, 4 or 5</li>
+</ul>
+
+<h3>Groups and Ranges</h3>
+<ul>
+    <li>.	Any character except new line (\n)</li>
+    <li>(a|b)	a or b</li>
+    <li>(...)	Group</li>
+    <li>(?:...)	Passive (non-c­apt­uring) group</li>
+    <li>[abc]	Range (a or b or c)</li>
+    <li>[^abc]	Not (a or b or c)</li>
+    <li>[a-q]	Lower case letter from a to q</li>
+    <li>[A-Q]	Upper case letter from A to Q</li>
+    <li>[0-7]	Digit from 0 to 7</li>
+    <li>\x	Group/­sub­pattern number "­x"</li>
+</ul>
+
+
+<h3>Escape Sequences</h3>
+<ul>
+    <li>\	Escape following character</li>
+    <li>\Q	Begin literal sequence</li>
+    <li>\E	End literal sequence</li>
+</ul>
+
+
+<h3>Pattern Modifiers</h3>
+<ul>
+    <li>g	Global match</li>
+    <li>i *	Case-i­nse­nsitive</li>
+    <li>m *	Multiple lines</li>
+    <li>s *	Treat string as single line</li>
+    <li>x *	Allow comments and whitespace in pattern</li>
+    <li>e *	Evaluate replac­ement</li>
+    <li>U *	Ungreedy pattern</li>
+</ul>
+
+
+
+
+<h3>String Replac­ement</h3>
+<ul>
+    <li>$n	nth non-pa­ssive group</li>
+    <li>$2	"­xyz­" in /^(abc­(xy­z))$/</li>
+    <li>$1	"­xyz­" in /^(?:a­bc)­(xyz)$/</li>
+    <li>$`	Before matched string</li>
+    <li>$'	After matched string</li>
+    <li>$+	Last matched string</li>
+    <li>$&	Entire matched string</li>
+</ul>
+
+
+
+<h3>POSIX</h3>
+<ul>
+    <li>[:upper:]	Upper case letters</li>
+    <li>[:lower:]	Lower case letters</li>
+    <li>[:alpha:]	All letters</li>
+    <li>[:alnum:]	Digits and letters</li>
+    <li>[:digit:]		Digits</li>
+    <li>[:xdigit:]	Hexade­cimal digits</li>
+    <li>[:punct:]	Punctu­ation</li>
+    <li>[:blank:]	Space and tab</li>
+    <li>[:space:]	Blank characters</li>
+    <li>[:cntrl:]	Control characters</li>
+    <li>[:graph:]	Printed characters</li>
+    <li>[:print:]		Printed characters and spaces</li>
+    <li>[:word:]	Digits, letters and underscore</li>
+</ul>
+</div>
 {% endblock %}

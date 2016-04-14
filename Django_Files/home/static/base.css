@@ -82,6 +82,9 @@ button, input[type="submit"] {
     color:#19BBBC;
 }
 
+.reference {
+    background-color: white;
+}
 
 footer {
     background-color: #0c0c0c;
