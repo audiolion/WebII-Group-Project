@@ -63,7 +63,7 @@ class Quiz(Model):
 
 class Lesson(Model):
     lesson_number = IntegerField()
-    video = FileField(null=True, default=None, blank=True)
+    video = CharField(null=True, default=None, blank=True, max_length=200)
     text = TextField()
     title = CharField(max_length=50)
     quiz = OneToOneField(Quiz)

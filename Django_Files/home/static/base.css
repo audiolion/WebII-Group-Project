@@ -5,13 +5,47 @@
     list-style-type: none;
 }
 
-nav a {
-    color: #19BBBC;
+body {
+    background-color: #212322;
 }
 
-footer {
+.navbar-nav > li > a {
+    color: #19BBBC !important;
+}
+
+.navbar {
+    margin-bottom: 0 !important;
+}
+
+
+.lessonContainer {
     background-color: #0E2D4E;
+    width: 92%;
+    margin: auto;
+    overflow: auto;
+}
+
+.localNav * {
+    color:#E5E5E5;
+}
+
+.lesson {
+    background-color: white;
+    padding: 0 10rem;
+}
+
+.lesson h1, .lesson h2, .lesson h3, .lesson h4, .lesson h5, .lesson h6 {
+    color:#19BBBC;
+}
+
+
+footer {
+    background-color: #0c0c0c;
     color: white;
+    padding: 5rem 10rem;
+    overflow: auto;
+    float: left;
+    width: 100%;
 }
 
 footer > p {
@@ -22,8 +56,4 @@ footer > p {
 
 footer div div:nth-child(n+2) {
     border-left: .1rem solid white;
-}
-
-footer .container {
-    padding: 5rem 0;
 }
