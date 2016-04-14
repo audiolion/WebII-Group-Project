@@ -7,6 +7,10 @@ def index(request):
     return render(request, "index.html")
 
 
+def about_us(request):
+    return render(request, "about_us.html")
+
+
 @login_required(login_url='/login/')
 def lessons(request, lesson_number=1):
     return render(request, "lessons.html", {
@@ -33,8 +37,3 @@ def dashboard(request):
 @login_required(login_url='/login/')
 def language_tools(request):
     return render(request, "language_tools.html")
-
-
-@login_required(login_url='/login/')
-def about_us(request):
-    return render(request, "about_us.html")
