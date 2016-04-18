@@ -107,3 +107,11 @@ STATICFILES_DIRS = (
 
 MEDIA_URL = STATIC_URL + "media/"
 MEDIA_ROOT = os.path.join(STATIC_ROOT, "media")
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.webfaction.com'
+EMAIL_HOST_USER = 'irregularexpressions'
+EMAIL_HOST_PASSWORD = os.environ['MAIL_PASSWORD']
+DEFAULT_FROM_EMAIL = 'help@irregularexpressions.rickycatron.com'
+SERVER_EMAIL = 'help@irregularexpressions.rickycatron.com'
+
