@@ -16,7 +16,7 @@ def login_view(request):
         except:
             messages.error("Username or password is incorrect")
             return redirect(request.META['HTTP_REFERER'])
-        return redirect("/")
+        return redirect("/dashboard")
     else:
         return render(request, "form.html", {
             'form': LoginForm(),

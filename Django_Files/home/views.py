@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from .models import Lesson
+
+from .models import *
 from django.contrib.auth.decorators import login_required
 
 
@@ -37,3 +38,17 @@ def dashboard(request):
 @login_required(login_url='/login/')
 def language_tools(request):
     return render(request, "language_tools.html")
+
+
+@login_required(login_url='/login/')
+def quizes(request, quizID):
+    quiz = Quiz.objects.get(pk=quizID)
+    if request.method == "POST":
+        for question in quiz.questions.all():
+            if request.POST.get(question.question) == question.correct_answer:
+                print True
+            else:
+                print False
+    return render(request, "quiz.html", {
+        "quiz": quiz
+    })
