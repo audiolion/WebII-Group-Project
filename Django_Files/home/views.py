@@ -46,9 +46,9 @@ def quizes(request, quizID):
     if request.method == "POST":
         for question in quiz.questions.all():
             if request.POST.get(question.question) == question.correct_answer:
-                print True
+                print(True)
             else:
-                print False
+                print(False)
     return render(request, "quiz.html", {
         "quiz": quiz
     })
