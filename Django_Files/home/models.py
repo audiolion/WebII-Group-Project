@@ -57,7 +57,7 @@ class Question(Model):
     answer2 = CharField(max_length=200)
     answer3 = CharField(max_length=200)
     answer4 = CharField(max_length=200)
-    correct_answer = CharField(max_length=5)
+    correct_answer = CharField(max_length=200)
 
     def __str__(self):
         return self.question[:20]

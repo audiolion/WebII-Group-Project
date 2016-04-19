@@ -23,6 +23,6 @@ IrregEx: Lessons
     {% load markup_tags %}
     {{ lesson.text|apply_markup:"markdown" }}
 
-    <a href="">Take Quiz</a>
+    <a href="/quiz/{{ lesson.quiz.id }}">Take Quiz</a>
 </div>
 {% endblock %}
