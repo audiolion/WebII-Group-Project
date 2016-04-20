@@ -20,15 +20,15 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/lessons">Lessons</a></li>
-                    <li><a href="/reference">Quick Reference</a></li>
-                    <li><a href="/forum">Forum</a></li>
-                    <li><a href="/language_tools">Language Tools</a></li>
+                    <li><a class="nav-a" href="/lessons">Lessons</a></li>
+                    <li><a class="nav-a" href="/reference">Quick Reference</a></li>
+                    <li><a class="nav-a" href="/forum">Forum</a></li>
+                    <li><a class="nav-a" href="/language_tools">Language Tools</a></li>
                     {% if user.is_authenticated %}
-                    <li><a href="/dashboard">Dashboard</a></li>
-                    <li><a href="/logout">Logout</a></li>
+                    <li><a class="nav-a" href="/dashboard">Dashboard</a></li>
+                    <li><a class="nav-a" href="/logout">Logout</a></li>
                     {% else %}
-                    <li><a href="/login">Login</a></li>
+                    <li><a class="nav-a" href="/login">Login</a></li>
                     {% endif %}
                 </ul>
             </div>
