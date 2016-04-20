@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.db import models, migrations
 import datetime
+
+from django.db import models, migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('home', '0005_auto_20160413_1944'),
     ]

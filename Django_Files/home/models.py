@@ -3,7 +3,7 @@ import datetime
 from django.contrib.auth.models import User
 from django.db.models import Model
 from django.db.models.fields import IntegerField, CharField, DateField, BooleanField, TextField
-from django.db.models.fields.files import ImageField, FileField
+from django.db.models.fields.files import ImageField
 from django.db.models.fields.related import ManyToManyField, OneToOneField
 
 

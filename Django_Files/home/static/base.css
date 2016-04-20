@@ -1,30 +1,38 @@
+/*
+ ██████  ███████ ███    ██ ███████ ██████   █████  ██
+██       ██      ████   ██ ██      ██   ██ ██   ██ ██
+██   ███ █████   ██ ██  ██ █████   ██████  ███████ ██
+██    ██ ██      ██  ██ ██ ██      ██   ██ ██   ██ ██
+ ██████  ███████ ██   ████ ███████ ██   ██ ██   ██ ███████
+*/
+
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-body {
+.body-div {
     background-color: #212322;
 }
 
 form {
-    width: 40%;
-    margin: 1rem auto;
     background-color: white;
-    border-radius: 1rem;
-    padding: .2rem 1rem 1rem 1rem;
-    font-size: 1.8rem;
-    color:#0c0c0c;
     border: .2rem solid #0c0c0c;
+    border-radius: 1rem;
+    color: #0c0c0c;
+    font-size: 1.8rem;
+    margin: 1rem auto;
     overflow: auto;
+    padding: .2rem 1rem 1rem 1rem;
+    width: 40%;
 }
 
 input, textarea, select {
-    width: 100%;
-    padding: .2rem .5rem;
     border-radius: 1rem;
+    padding: .2rem .5rem;
+    width: 100%;
 }
 
 form div {
@@ -33,16 +41,16 @@ form div {
 
 button, input[type="submit"] {
     background-color: #1E3D5E;
-    color: #0c0c0c;
     border: .2rem solid #0c0c0c;
-    padding: .5rem 1rem;
     border-radius: 1rem;
+    color: #0c0c0c;
     margin-top: 1rem;
+    padding: .5rem 1rem;
 }
 
 .formLink {
-    width: 100%;
     margin-top: 2rem;
+    width: 100%;
 }
 
 .formLink a:first-child {
@@ -53,24 +61,118 @@ button, input[type="submit"] {
     float: right;
 }
 
-.navbar-nav > li > a {
-    color: #19BBBC !important;
+.navbar-nav > li > a.nav-a {
+    color: #19BBBC;
 }
 
 .navbar {
     margin-bottom: 0 !important;
 }
 
+/*
+███████ ██████  ██       █████  ███████ ██   ██     ██████   █████   ██████  ███████
+██      ██   ██ ██      ██   ██ ██      ██   ██     ██   ██ ██   ██ ██       ██
+███████ ██████  ██      ███████ ███████ ███████     ██████  ███████ ██   ███ █████
+     ██ ██      ██      ██   ██      ██ ██   ██     ██      ██   ██ ██    ██ ██
+███████ ██      ███████ ██   ██ ███████ ██   ██     ██      ██   ██  ██████  ███████
+*/
+
+.splash {
+    background-color: #fdfdfd;
+    display: block;
+    height: auto;
+    margin: 3em auto;
+    max-width: 400px;
+    text-align: center;
+    width: 100%;
+}
+
+.btn {
+    margin-right: .5em;
+}
+
+.btn-sign {
+    background-color: #19BBBC;
+    color: #fdfdfd;
+}
+
+/*
+██      ███████ ███████ ███████  ██████  ███    ██ ███████
+██      ██      ██      ██      ██    ██ ████   ██ ██
+██      █████   ███████ ███████ ██    ██ ██ ██  ██ ███████
+██      ██           ██      ██ ██    ██ ██  ██ ██      ██
+███████ ███████ ███████ ███████  ██████  ██   ████ ███████
+*/
 
 .lessonContainer {
     background-color: #0E2D4E;
-    width: 92%;
     margin: auto;
     overflow: auto;
+    width: 92%;
 }
 
-.localNav * {
-    color:#E5E5E5;
+#local-nav {
+    background-color: #333;
+    border-color: #333;
+    border-radius: 0;
+    font-family: 'Source Code Pro';
+    font-size: 1.2em;
+}
+
+#local-button {
+    background-color: #E0E0E0;
+}
+
+#local-button:hover {
+    background-color: #BDBDBD;
+}
+
+#local-nav > .localNav > ul > li > a {
+    color: #19BBBC;
+}
+
+.localNav {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.localNavTitle {
+    font-weight: bold;
+    width: 100%;
+}
+
+.localNavDescription {
+    font-style: italic;
+    opacity: 0.6;
+    width: 100%;
+}
+
+#local-nav > .localNav > ul > li.selected > a {
+    color: #fdfdfd;
+}
+
+.selected .localNavTitle:before {
+    color: #f6de89;
+    content: " \B7 ";
+    font-weight: 900;
+    padding-right: 5px;
+}
+
+.not-selected::after {
+    background: #BDBDBD;
+    content: '';
+    display: block;
+    height: 2px;
+    margin-top: 0;
+    padding-top: 0;
+    transition: width .3s;
+    width: 0;
+
+}
+
+.not-selected:hover::after {
+    width: 100%;
 }
 
 .lesson {
@@ -79,19 +181,27 @@ button, input[type="submit"] {
 }
 
 .lesson h1, .lesson h2, .lesson h3, .lesson h4, .lesson h5, .lesson h6 {
-    color:#19BBBC;
+    color: #19BBBC;
 }
 
 .reference {
     background-color: white;
 }
 
+/*
+███████  ██████   ██████  ████████ ███████ ██████
+██      ██    ██ ██    ██    ██    ██      ██   ██
+█████   ██    ██ ██    ██    ██    █████   ██████
+██      ██    ██ ██    ██    ██    ██      ██   ██
+██       ██████   ██████     ██    ███████ ██   ██
+*/
+
 footer {
     background-color: #0c0c0c;
     color: white;
-    padding: 5rem 10rem;
-    overflow: auto;
     float: left;
+    overflow: auto;
+    padding: 5rem 10rem;
     width: 100%;
 }
 

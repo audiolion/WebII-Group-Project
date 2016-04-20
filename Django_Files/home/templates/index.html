@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "main_layout.html" %}
 
 {% load staticfiles %}
 
@@ -7,13 +7,14 @@ IrregEx: Home
 {% endblock %}
 
 {% block content %}
-<div>
-    <img src="/static/large_logo.png" alt="The IrregEx Logo">
-    <h1>IrregEx</h1>
-    <p>We strive to provide a simple, concise way for students of any level to learn about regular expressions through video, games, practice problems, and more!</p>
-    <a href="/about_us">Learn More</a>
+<div class="splash">
+    <img class="splash" src="/static/large_logo.png" alt="The IrregEx Logo">
+    <h1>Irregular Expressions</h1>
+    <p>We strive to provide a simple, concise way for students of any level to learn about regular expressions through
+        video, games, practice problems, and more!</p>
+    <a href="/about_us" class="btn btn-default" role="button">Learn More</a>
     {% if not user.is_authenticated %}
-        <a href="/register">Sign Up</a>
+    <a href="/register" class="btn btn-sign" role="button">Sign Up</a>
     {% endif %}
 </div>
 {% endblock %}

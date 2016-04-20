@@ -20,66 +20,73 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/lessons">Lessons</a></li>
-                    <li><a href="/reference">Quick Reference</a></li>
-                    <li><a href="/faq">FAQ</a></li>
-                    <li><a href="/language_tools">Language Tools</a></li>
+                    <li><a class="nav-a" href="/lessons">Lessons</a></li>
+                    <li><a class="nav-a" href="/reference">Quick Reference</a></li>
+                    <li><a class="nav-a" href="/faq">FAQ</a></li>
+                    <li><a class="nav-a" href="/forum">Forum</a></li>
+                    <li><a class="nav-a" href="/language_tools">Language Tools</a></li>
                     {% if user.is_authenticated %}
-                    <li><a href="/dashboard">Dashboard</a></li>
-                    <li><a href="/logout">Logout</a></li>
+                    <li><a class="nav-a" href="/dashboard">Dashboard</a></li>
+                    <li><a class="nav-a" href="/logout">Logout</a></li>
                     {% else %}
-                    <li><a href="/login">Login</a></li>
+                    <li><a class="nav-a" href="/login">Login</a></li>
                     {% endif %}
                 </ul>
             </div>
         </div>
     </nav>
 </header>
-<div class="lessonContainer">
 {% endblock %}
 
-{% block footer %}
+{% block body %}
+<div class="lessonContainer">
+    {% endblock %}
+
+    {% block footer %}
 </div>
 <footer>
-<div  class="col-xs-12 col-sm-6 col-md-7">
-    <ul>
-        <li class="col-xs-4">
-            <h5>Company</h5>
-            <ul>
-                <li><a href="/about_us">About Us</a></li>
-                <li><a href="/meet_the_team">Meet the Team</a></li>
-                <li><a href="/contact">Contact Us</a></li>
-            </ul>
-        </li>
-        <li class="col-xs-4">
-            <h5>Account</h5>
-            <ul>
-                <li>Support</li>
-                <li>Payments</li>
-                <li>Subscription</li>
-            </ul>
-        </li>
-        <li class="col-xs-4">
-            <h5>Legal</h5>
-            <ul>
-                <li>Copyright Notice</li>
-                <li>License</li>
-                <li>User Agreement</li>
-            </ul>
-        </li>
-    </ul>
+    <div class="col-xs-12 col-sm-6 col-md-7">
+        <ul>
+            <li class="col-xs-4">
+                <h5>Company</h5>
+                <ul>
+                    <li><a href="/about_us">About Us</a></li>
+                    <li><a href="/meet_the_team">Meet the Team</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                </ul>
+            </li>
+            <li class="col-xs-4">
+                <h5>Account</h5>
+                <ul>
+                    <li>Support</li>
+                    <li>Payments</li>
+                    <li>Subscription</li>
+                </ul>
+            </li>
+            <li class="col-xs-4">
+                <h5>Legal</h5>
+                <ul>
+                    <li>Copyright Notice</li>
+                    <li>License</li>
+                    <li>User Agreement</li>
+                </ul>
+            </li>
+        </ul>
 
-</div>
-<div class="col-xs-12 col-sm-3 col-md-2 footer-contact">
-    <p><span class="glyphicon glyphicon-earphone"></span> 1-800-555-1234</p>
-    <p><span class="glyphicon glyphicon-envelope"></span> info@irregex.com</p>
-    <a target="_blank" href="https://www.facebook.com/irregex"><img src="/static/facebook.png" alt="Facebooks Logo" class="col-xs-4"></a>
-    <a target="_blank" href="https://www.twitter.com/irregexlearn"><img src="/static/twitter.png" alt="Twitters Logo" class="col-xs-4"></a>
-    <a target="_blank" href="https://www.instagram.com/irregex"><img src="/static/instagram.png" alt="Instagrams Logo" class="col-xs-4"></a>
-</div>
-<div class="col-xs-12 col-sm-3">
-    <p>Copyright &copy; IrregEx Inc. 2016</p>
-    <p>1234 Street Ave, Rochester, NY, 14623</p>
-</div>
+    </div>
+    <div class="col-xs-12 col-sm-3 col-md-2 footer-contact">
+        <p><span class="glyphicon glyphicon-earphone"></span> 1-800-555-1234</p>
+        <p><span class="glyphicon glyphicon-envelope"></span> info@irregex.com</p>
+        <a target="_blank" href="https://www.facebook.com/irregex"><img src="/static/facebook.png" alt="Facebooks Logo"
+                                                                        class="col-xs-4"></a>
+        <a target="_blank" href="https://www.twitter.com/irregexlearn"><img src="/static/twitter.png"
+                                                                            alt="Twitters Logo" class="col-xs-4"></a>
+        <a target="_blank" href="https://www.instagram.com/irregex"><img src="/static/instagram.png"
+                                                                         alt="Instagrams Logo" class="col-xs-4"></a>
+    </div>
+    <div class="col-xs-12 col-sm-3">
+        <p>Copyright &copy; IrregEx Inc. 2016</p>
+        <p>1234 Street Ave, Rochester, NY, 14623</p>
+    </div>
 </footer>
 {% endblock %}

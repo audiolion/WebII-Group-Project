@@ -114,4 +114,3 @@ EMAIL_HOST_USER = 'irregularexpressions'
 EMAIL_HOST_PASSWORD = os.environ['MAIL_PASSWORD']
 DEFAULT_FROM_EMAIL = 'help@irregularexpressions.rickycatron.com'
 SERVER_EMAIL = 'help@irregularexpressions.rickycatron.com'
-

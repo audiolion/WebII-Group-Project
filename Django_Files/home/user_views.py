@@ -2,8 +2,9 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
-from .models import UserProfile
+
 from .forms import LoginForm, RegisterForm
+from .models import UserProfile
 
 
 def login_view(request):
