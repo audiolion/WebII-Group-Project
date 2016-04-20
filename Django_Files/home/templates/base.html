@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200,300,500,600,700,900" rel="stylesheet" type="text/css">
@@ -19,7 +20,7 @@
 {# COMMENT: Messages are sent from the server to alert the user. Easier then a separate page #}
 <ul class="messages">
     {% for message in messages %}
-    <li
+    <li>
             {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}
     </li>
     {% endfor %}

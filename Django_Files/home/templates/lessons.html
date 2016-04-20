@@ -7,6 +7,7 @@ IrregEx: Lessons
 {% endblock %}
 
 {% block content %}
+<div class="body-div">
 <nav id="local-nav" class="navbar navbar-default col-sm-3 col-md-2">
     <button type="button" id="local-button" class="nav-button navbar-toggle" data-toggle="collapse" data-target="#localNav">
       <span>Show Lessons</span>
@@ -42,5 +43,6 @@ IrregEx: Lessons
     {{ lesson.text|apply_markup:"markdown" }}
 
     <a href="/quiz/{{ lesson.quiz.id }}">Take Quiz</a>
+</div>
 </div>
 {% endblock %}
