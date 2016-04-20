@@ -53,8 +53,8 @@ button, input[type="submit"] {
     float: right;
 }
 
-.navbar-nav > li > a {
-    color: #19BBBC !important;
+.navbar-nav > li > a.nav-a {
+    color: #19BBBC;
 }
 
 .navbar {
@@ -69,8 +69,68 @@ button, input[type="submit"] {
     overflow: auto;
 }
 
-.localNav * {
-    color:#E5E5E5;
+#local-nav {
+    background-color: #333;
+    border-color: #333;
+    font-size: 1.2em;
+    border-radius: 0;
+    font-family: 'Source Code Pro';
+}
+
+#local-button {
+    background-color: #E0E0E0;
+}
+
+#local-button:hover {
+    background-color: #BDBDBD;
+}
+
+#local-nav > .localNav > ul > li > a {
+    color: #19BBBC;
+}
+
+.localNav {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.localNavTitle {
+    width: 100%;
+    font-weight: bold;
+}
+
+.localNavDescription {
+    width: 100%;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+#local-nav > .localNav > ul > li.selected > a {
+    color: #fdfdfd;
+}
+
+.selected .localNavTitle:before {
+    color: #f6de89;
+    font-weight: 900;
+    content: " \B7 ";
+    padding-right: 5px;
+}
+
+.not-selected::after {
+    content: '';
+    display: block;
+    width: 0;
+    margin-top: 0;
+    padding-top: 0;
+    height: 2px;
+    background: #BDBDBD;
+    transition: width .3s;
+
+}
+
+.not-selected:hover::after {
+    width: 100%;
 }
 
 .lesson {
