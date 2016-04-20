@@ -32,7 +32,7 @@
 2. UI/UX that is minimalistic and flows well to provide a good user experience
 3. Short term: 10 Quizes 3 questions each
 4. Short term: 15 quick reference explinations (COMPLETE)
-5. Short term: 5 FAQ reference
+5. Short term: 5 FAQ reference (COMPLETE)
 6. Short term: 5 small games which teach one concept of regex
 7. Short term: working basic code tester
 8. Sharing on Social Media of Achievements

@@ -12,6 +12,7 @@ urlpatterns = [
                   url(r'^quiz/(?P<quizID>\w+)/$', views.quizes),
                   url(r'^reference/$', views.reference),
                   url(r'^forum/$', views.forum),
+                  url(r'^faq/$', views.faq),
                   url(r'^dashboard/$', views.dashboard),
                   url(r'^language_tools/$', views.language_tools),
                   url(r'^about_us/$', views.about_us),

@@ -1,0 +1,45 @@
+{% extends "main_layout.html" %}
+
+{% load staticfiles %}
+
+{% block title %}
+IrregEx: Lessons
+{% endblock %}
+
+{% block content %}
+<div class="col-xs-12">
+    <h3>What are regular expressions?</h3>
+    <p>Regular Expressions are a sequence of characters that are used to search for substrings
+        ("matches") in strings. They are mainly for use in pattern matching.</p>
+
+    <h3>Why would I use them?</h3>
+
+    <p>Regular Expressions have lots of uses in scripting.
+        You could use them to replace all occurrences of certain strings in a
+        file or test whether a particular input was submitted correctly (Such as an email address).
+
+    What does a regular expression look like?
+
+    A regular expression is usually a set of symbols and characters between two forward slashes. For example,
+    “/[abc]+/”  is a simple one and
+    “^[A-Za-z0-9_\.-]+@[A-Za-z0-9_\.-]+[A-Za-z0-9_][A-Za-z0-9_]$ “
+    (a regular expression for matching an email address) is a little more complex.</p>
+
+    <h3>How much experience do I need to use this site?</h3>
+    <p>No experience required. This website is designed to teach people who have never
+        touch regular expressions before as well as a way for more advanced
+        users to brush up on some techniques that they may have forgotten.</p>
+
+    <h3>Why should I sign up and use this site?</h3>
+    <p>Signing up for a free account allows users to take lessons and build progression on their account.
+        Users can also interact in our forums to discuss Regular Expressions and ask the community any questions you may have.</p>
+
+    <h3>Do I get anything for building progress in my account?</h3>
+    <p>Sweet, sweet badges for you to show off.</p>
+
+</div>
+{% endblock %}
+
+
+
+

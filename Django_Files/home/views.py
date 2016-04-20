@@ -30,6 +30,10 @@ def forum(request):
     return render(request, "forum.html")
 
 
+def faq(request):
+    return render(request, "faq.html")
+
+
 @login_required(login_url='/login/')
 def dashboard(request):
     return render(request, "dashboard.html")
