@@ -15,7 +15,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <div class="navbar-brand">
-                    <a class="" href="/"><img src="/static/small_logo.png" alt="The IrregEx Logo"></a>
+                    <a class="" href="/"><img src="/static/logo.png" alt="The IrregEx Logo"></a>
                 </div>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -26,7 +26,7 @@
                     <li><a class="nav-a" href="/forum">Forum</a></li>
                     <li><a class="nav-a" href="/language_tools">Language Tools</a></li>
                     {% if user.is_authenticated %}
-                    <li><a class="nav-a" href="/dashboard">Dashboard</a></li>
+                    <li><a class="nav-a" href="/dashboard">{{ user.username }} &#9660;</a></li>
                     <li><a class="nav-a" href="/logout">Logout</a></li>
                     {% else %}
                     <li><a class="nav-a" href="/login">Login</a></li>

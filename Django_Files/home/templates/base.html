@@ -20,13 +20,16 @@
 <body>
 {% if messages %}
 {# COMMENT: Messages are sent from the server to alert the user. Easier then a separate page #}
-<ul class="messages">
+<div class="backgroundShadow">
+    <ul class="messages">
     {% for message in messages %}
-    <li>
-        {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}
+    <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>
+        <a href="#" onclick="location.reload()">X</a>
+        {{ message }}
     </li>
     {% endfor %}
 </ul>
+</div>
 {% endif %}
 
 {% block nav %}

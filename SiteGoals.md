@@ -29,8 +29,8 @@
 
 ##### Ranking of Short Term Goal
 1. Short term: 10 basic lessons on regex (video for at least 3) (COMPLETE)
-2. UI/UX that is minimalistic and flows well to provide a good user experience
-3. Short term: 10 Quizes 3 questions each
+2. UI/UX that is minimalistic and flows well to provide a good user experience (COMPLETE)
+3. Short term: 10 Quizes 3 questions each (COMPLETE)
 4. Short term: 15 quick reference explinations (COMPLETE)
 5. Short term: 5 FAQ reference (COMPLETE)
 6. Short term: 5 small games which teach one concept of regex

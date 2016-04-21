@@ -7,4 +7,42 @@ IrregEx: Dashboard
 {% endblock %}
 
 {% block content %}
+<div class="col-xs-12 col-md-6">
+    <h2>{% if next %}
+        Lesson: {{next.title}}</h2>
+        <a class="btn btn-success" href="/lessons/{{next.lesson_number}}"/>
+            Continue Lesson &rsaquo;
+        </a>
+    {% else %}
+        You are done!</h2>
+    {% endif %}
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="{{completion_percentage}}"
+        aria-valuemin="0" aria-valuemax="100" style="width:{{completion_percentage}}%">
+            {{completion_percentage}}% Complete
+        </div>
+    </div>
+</div>
+<div class="col-xs-12 col-md-6">
+    <h2>Badges</h2>
+    {% if user.badges %}
+        {% for badge in user.badges %}
+            {{ badge }}
+        {% endfor %}
+    {% else %}
+        <p>You have no badges yet</p>
+    {% endif %}
+</div>
+
+<div class="col-xs-12">
+    <h2>Forum Posts</h2>
+    {% if user.posts %}
+        {% for post in user.posts %}
+            {{ post }}
+        {% endfor %}
+    {% else %}
+        <p>You have no posts yet</p>
+    {% endif %}
+</div>
+
 {% endblock %}

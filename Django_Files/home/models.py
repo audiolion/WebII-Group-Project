@@ -94,10 +94,10 @@ class Lesson(Model):
 
 class UserProfile(Model):
     user = OneToOneField(User)
-    progress = IntegerField(default=0)
-    badges = ManyToManyField(Badge, null=True, default=None)
-    goals = ManyToManyField(Goal, null=True, default=None)
-    posts = ManyToManyField(Post, null=True, default=None)
+    lessons = ManyToManyField(Lesson, null=True, default=None, blank=True)
+    badges = ManyToManyField(Badge, null=True, default=None, blank=True)
+    goals = ManyToManyField(Goal, null=True, default=None, blank=True)
+    posts = ManyToManyField(Post, null=True, default=None, blank=True)
 
     def __str__(self):
         return self.user.email + " profile"
