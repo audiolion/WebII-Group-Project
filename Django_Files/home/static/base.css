@@ -76,6 +76,10 @@ button, input[type="submit"] {
     color: #19BBBC;
 }
 
+#navDropdown {
+  background-color: rgba(0, 0, 0, 0);
+}
+
 .navbar {
     margin-bottom: 0 !important;
 }

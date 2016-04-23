@@ -22,10 +22,16 @@
                     <li><a class="nav-a" href="/reference">Quick Reference</a></li>
                     <li><a class="nav-a" href="/faq">FAQ</a></li>
                     <li><a class="nav-a" href="/forum">Forum</a></li>
-                    <li><a class="nav-a" href="/language_tools">Language Tools</a></li>
+                    <li><a class="nav-a" href="/language_tools">Language Specific</a></li>
                     {% if user.is_authenticated %}
-                    <li><a class="nav-a" href="/dashboard">{{ user.username }} &#9660;</a></li>
-                    <li><a class="nav-a" href="/logout">Logout</a></li>
+                    <li>
+                      <a class="nav-a dropdown dropdown-toggle" role="button" id="navDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">{{ user.username }} <span class="caret"></span>
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navDropdown">
+                        <li><a href="/dashboard">Dashboard</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                      </ul>
+                    </li>
                     {% else %}
                     <li><a class="nav-a" href="/login">Login</a></li>
                     {% endif %}
