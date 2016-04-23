@@ -267,3 +267,18 @@ footer > p {
 footer div div:nth-child(n+2) {
     border-left: .1rem solid white;
 }
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-contact ul {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-contact li {
+    float: left;
+    width: 33%;
+}
