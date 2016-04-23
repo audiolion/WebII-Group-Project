@@ -15,7 +15,7 @@ def login_view(request):
         try:
             login(request, user)
         except:
-            messages.error("Username or password is incorrect")
+            messages.add_message(request, messages.ERROR, 'Inncorrect Login Credentials')
             return redirect(request.META['HTTP_REFERER'])
         return redirect("/dashboard")
     else:
