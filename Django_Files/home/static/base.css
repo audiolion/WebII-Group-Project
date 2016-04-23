@@ -17,6 +17,15 @@
     background-color: #212322;
 }
 
+.navbar-brand {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-brand img {
+    max-height: 100%;
+}
+
 form {
     background-color: white;
     border: .2rem solid #0c0c0c;
