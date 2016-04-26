@@ -8,21 +8,23 @@ IrregEx: Lessons
 
 {% block content %}
 <div class="col-xs-12">
-    <h2>{{ quiz.name }}</h2>
     <form method="post" action="">
+        <h2>{{ quiz.name }}</h2>
         {% csrf_token %}
         {% for question in quiz.questions.all %}
-        {{ question.question }}
-        <label for="{{question.answer1}}">{{question.answer1}}</label>
-        <input name="{{ question.question}}" value="{{ question.answer1}}" type="radio" id="{{question.answer1}}">
-        <label for="{{question.answer2}}">{{question.answer2}}</label>
-        <input name="{{ question.question}}" value="{{ question.answer2}}" type="radio" id="{{question.answer2}}">
-        <label for="{{question.answer3}}">{{question.answer3}}</label>
-        <input name="{{ question.question}}" value="{{ question.answer3}}" type="radio" id="{{question.answer3}}">
-        <label for="{{question.answer4}}">{{question.answer4}}</label>
-        <input name="{{ question.question}}" value="{{ question.answer4}}" type="radio" id="{{question.answer4}}">
+        <div class="question">
+            <h3>{{ question.question }}</h3>
+            <input name="{{ question.question}}" value="{{ question.answer1}}" type="radio" id="{{question.answer1}}">
+            <label for="{{question.answer1}}">{{question.answer1}}</label>
+            <input name="{{ question.question}}" value="{{ question.answer2}}" type="radio" id="{{question.answer2}}">
+            <label for="{{question.answer2}}">{{question.answer2}}</label>
+            <input name="{{ question.question}}" value="{{ question.answer3}}" type="radio" id="{{question.answer3}}">
+            <label for="{{question.answer3}}">{{question.answer3}}</label>
+            <input name="{{ question.question}}" value="{{ question.answer4}}" type="radio" id="{{question.answer4}}">
+            <label for="{{question.answer4}}">{{question.answer4}}</label>
+        </div>
         {% endfor %}
-        <button type="submit">Submit</button>
+        <button type="submit" class="btn btn-sign">Submit</button>
     </form>
 </div>
 </div>
