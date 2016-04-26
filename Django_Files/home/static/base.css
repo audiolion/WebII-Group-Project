@@ -50,7 +50,7 @@ form {
     text-align: center;
 }
 
-input[type="text"], textarea, select, label {
+input[type="text"], textarea, input[type="password"], select, label {
     border-radius: 1rem;
     padding: .2rem .5rem;
     width: 100%;
