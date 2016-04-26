@@ -268,7 +268,6 @@ footer {
     float: left;
     overflow: auto;
     padding: 5rem 10rem;
-    width: 100%;
 }
 
 footer > p {
@@ -294,4 +293,15 @@ footer ul {
 .footer-contact li {
     float: left;
     width: 33%;
+}
+
+footer .col-xs-6 {
+    margin: 0;
+    padding: 1rem 0;
+}
+
+@media (max-width: 600px) {
+    footer {
+        padding: 0;
+    }
 }
