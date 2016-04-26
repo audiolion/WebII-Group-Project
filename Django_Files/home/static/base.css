@@ -84,12 +84,17 @@ button, input[type="submit"] {
     margin-bottom: 0 !important;
 }
 
+/* Messages */
 .info {
-    background-color: blue;
+    background-color: #5cd65c;
+    width: 30%;
+    padding: 2%;
 }
 
 .error {
-    background-color: red;
+    background-color: #ff3333;
+    width: 30%;
+    padding: 2%;
 }
 
 .backgroundShadow {
@@ -103,23 +108,31 @@ button, input[type="submit"] {
 }
 
 .messages {
-    position: fixed;
-    top:20%;
-    left:30%;
-    right: 30%;
-}
-
-.messages li {
-    padding: 1rem;
-    color: white;
-    font-size: 4rem;
     text-align: center;
-    border: .2rem solid white;
+    background-color: white;
+    width: 30%;
+    padding: 2%;
 }
 
-.messages a {
-    float:right;
-    color: black;
+.close_msg_btn {
+    border-radius: 22px;
+    background-color: #ff3333;
+    border: none;
+    color: white;
+    padding: 3% 7%;
+    text-align: center;
+    text-decoration: none;
+    margin: 8px;
+    cursor: pointer;
+}
+.close_msg_btn:hover{
+    background-color: #ff4d4d;
+}
+
+.msg_icon{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*
