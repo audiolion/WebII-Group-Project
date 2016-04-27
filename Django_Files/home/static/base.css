@@ -11,14 +11,6 @@
     margin: 0;
 }
 
-body {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-}
-
 .body-div {
     background-color: #212322;
 }
@@ -36,29 +28,26 @@ hr {
   margin-top: 0;
 }
 
-main {
-    min-height: calc(100% - 24.5rem);
-}
-
 form {
+    background-color: white;
+    border: .2rem solid #0c0c0c;
+    border-radius: 1rem;
+    color: #0c0c0c;
+    font-size: 1.8rem;
+    margin: 1rem auto;
+    overflow: auto;
+    padding: .2rem 1rem 1rem 1rem;
     width: 40%;
-    margin: 1rem 30%;
-    float: left;
 }
 
-.btn-center {
-    text-align: center;
-}
-
-input[type="text"], textarea, input[type="password"], select, label {
+input, textarea, select {
     border-radius: 1rem;
     padding: .2rem .5rem;
     width: 100%;
 }
 
-.question label {
-    width: auto;
-    margin-right: 3rem;
+form div {
+    text-align: center;
 }
 
 button, input[type="submit"] {
@@ -153,13 +142,30 @@ button, input[type="submit"] {
 
 .btn {
     margin-right: .5em;
-    margin: 1rem 0;
-    font-size: 2rem;
 }
 
 .btn-sign {
     background-color: #19BBBC;
     color: #fdfdfd;
+}
+
+/*
+██████   █████  ███████ ██   ██ ██████   ██████   █████  ██████  ██████
+██   ██ ██   ██ ██      ██   ██ ██   ██ ██    ██ ██   ██ ██   ██ ██   ██
+██   ██ ███████ ███████ ███████ ██████  ██    ██ ███████ ██████  ██   ██
+██   ██ ██   ██      ██ ██   ██ ██   ██ ██    ██ ██   ██ ██   ██ ██   ██
+██████  ██   ██ ███████ ██   ██ ██████   ██████  ██   ██ ██   ██ ██████
+*/
+
+.material-box {
+    background-color: rgb(237, 239, 240);
+    border-bottom-color: rgb(87, 99, 102);
+    border-radius: 4px;
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
+    color: rgb(87, 99, 102);
+    padding: 30px;
+    margin: 30px;
+    width: 100%;
 }
 
 /*
@@ -268,6 +274,7 @@ footer {
     float: left;
     overflow: auto;
     padding: 5rem 10rem;
+    width: 100%;
 }
 
 footer > p {
@@ -293,15 +300,4 @@ footer ul {
 .footer-contact li {
     float: left;
     width: 33%;
-}
-
-footer .col-xs-6 {
-    margin: 0;
-    padding: 1rem 0;
-}
-
-@media (max-width: 600px) {
-    footer {
-        padding: 0;
-    }
 }

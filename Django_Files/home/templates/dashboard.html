@@ -8,8 +8,9 @@ IrregEx: Dashboard
 
 {% block content %}
 <div class="col-xs-12 col-md-6">
+  <div class="material-box">
     <h2>{% if next %}
-        Lesson: {{next.title}}</h2>
+        {{next.title}}</h2>
         <a class="btn btn-success" href="/lessons/{{next.lesson_number}}"/>
             Continue Lesson &rsaquo;
         </a>
@@ -22,8 +23,10 @@ IrregEx: Dashboard
             {{completion_percentage}}% Complete
         </div>
     </div>
+  </div>
 </div>
 <div class="col-xs-12 col-md-6">
+  <div class="material-box">
     <h2>Badges</h2>
     {% if user.badges %}
         {% for badge in user.badges %}
@@ -32,9 +35,11 @@ IrregEx: Dashboard
     {% else %}
         <p>You have no badges yet</p>
     {% endif %}
+  </div>
 </div>
 
 <div class="col-xs-12">
+  <div class="material-box">
     <h2>Forum Posts</h2>
     {% if user.posts %}
         {% for post in user.posts %}
@@ -43,6 +48,7 @@ IrregEx: Dashboard
     {% else %}
         <p>You have no posts yet</p>
     {% endif %}
+  </div>
 </div>
 
 {% endblock %}
