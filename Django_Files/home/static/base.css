@@ -352,6 +352,11 @@ button, input[type="submit"] {
     background-color: white;
 }
 
+.videoFrame {
+    width: 60%;
+    height: 30rem;
+}
+
 /*
 ███████  ██████   ██████  ████████ ███████ ██████
 ██      ██    ██ ██    ██    ██    ██      ██   ██
