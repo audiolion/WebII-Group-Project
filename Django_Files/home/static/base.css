@@ -85,16 +85,19 @@ button, input[type="submit"] {
 }
 
 /* Messages */
-.info {
-    background-color: #5cd65c;
+.info, .error{
     width: 30%;
-    padding: 2%;
+    padding: 3%;
+    margin: auto;
+    margin-top:15%;
+}
+
+.info {
+    background-color: #66cc66;
 }
 
 .error {
     background-color: #ff3333;
-    width: 30%;
-    padding: 2%;
 }
 
 .backgroundShadow {
@@ -111,12 +114,13 @@ button, input[type="submit"] {
     text-align: center;
     background-color: white;
     width: 30%;
-    padding: 2%;
+    padding: 3%;
+    margin: auto;
 }
 
 .close_msg_btn {
     border-radius: 22px;
-    background-color: #ff3333;
+    background-color: #ff4d4d;
     border: none;
     color: white;
     padding: 3% 7%;
@@ -126,7 +130,7 @@ button, input[type="submit"] {
     cursor: pointer;
 }
 .close_msg_btn:hover{
-    background-color: #ff4d4d;
+    background-color: #ff3333;
 }
 
 .msg_icon{
