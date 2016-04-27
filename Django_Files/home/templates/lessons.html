@@ -43,7 +43,7 @@ IrregEx: Lessons
         {% load markup_tags %}
         {{ lesson.text|apply_markup:"markdown" }}
 
-        <a href="/quiz/{{ lesson.quiz.id }}">Take Quiz</a>
+        <a class="takeQuiz btn btn-sign" href="/quiz/{{ lesson.quiz.id }}">Take Quiz</a>
     </div>
 </div>
 {% endblock %}
