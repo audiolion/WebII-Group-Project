@@ -394,6 +394,11 @@ button, input[type="submit"] {
 }
 
 .lesson h1, .lesson h2, .lesson h3, .lesson h4, .lesson h5, .lesson h6 {
+        color: #19BBBC;
+}
+
+.reference {
+        background-color: white;
 }
 
 .videoFrame {
