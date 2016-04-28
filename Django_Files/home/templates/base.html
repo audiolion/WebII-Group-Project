@@ -22,15 +22,17 @@
 {# COMMENT: Messages are sent from the server to alert the user. Easier then a separate page #}
 <div class="backgroundShadow">
     {% for message in messages %}
-        <div {% if message.tags %} class="{{ message.tags }}" {% endif %}>
-            <img {% if message.tags %} src="/static/{{ message.tags }}.png" {% endif %} class="msg_icon"/>
-        </div>
+    <div {% if message.tags %} class="{{ message.tags }}" {% endif %}>
+        <img {% if message.tags %} src="/static/{{ message.tags }}.png" {% endif %} class="msg_icon"/>
+    </div>
 
-        <div class="messages">
-            {{ message }}
-            <br/>
-            <a href="#" onclick="location.reload()"><button class="close_msg_btn">X Close</button></a>
-        </div>
+    <div class="messages">
+        {{ message }}
+        <br/>
+        <a href="#" onclick="location.reload()">
+            <button class="close_msg_btn">X Close</button>
+        </a>
+    </div>
     {% endfor %}
 </div>
 {% endif %}
@@ -41,10 +43,10 @@
 {% endblock %}
 
 <main>
-{% block content %}
-{# COMMENT: Main stuff goes here! #}
+    {% block content %}
+    {# COMMENT: Main stuff goes here! #}
 
-{% endblock %}
+    {% endblock %}
 </main>
 {% block footer %}
 {# COMMENT: Footer and such jazz #}

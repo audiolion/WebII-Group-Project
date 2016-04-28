@@ -25,12 +25,13 @@
                     <li><a class="nav-a" href="/language_tools">Language Specific</a></li>
                     {% if user.is_authenticated %}
                     <li>
-                      <a class="nav-a dropdown dropdown-toggle" role="button" id="navDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">{{ user.username }} <span class="caret"></span>
-                      </a>
-                      <ul class="dropdown-menu" aria-labelledby="navDropdown">
-                        <li><a href="/dashboard">Dashboard</a></li>
-                        <li><a href="/logout">Logout</a></li>
-                      </ul>
+                        <a class="nav-a dropdown dropdown-toggle" role="button" id="navDropdown" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="true">{{ user.username }} <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navDropdown">
+                            <li><a href="/dashboard">Dashboard</a></li>
+                            <li><a href="/logout">Logout</a></li>
+                        </ul>
                     </li>
                     {% else %}
                     <li><a class="nav-a" href="/login">Login</a></li>
@@ -82,11 +83,13 @@
         <p><img src="/static/phone-icon.png" alt="Phone"> 1-800-555-1234</p>
         <p><img src="/static/mail-icon.png" alt="Mail"> info@irregex.com</p>
         <ul>
-          <li><a target="_blank" href="https://www.facebook.com/irregex"><img src="/static/facebook-icon.png" alt="Facebook Logo"></a></li>
-          <li><a target="_blank" href="https://www.twitter.com/irregexlearn"><img src="/static/twitter-icon.png"
-          alt="Twitter Logo" class=""></a></li>
-          <li><a target="_blank" href="https://www.instagram.com/irregex"><img src="/static/instagram-icon.png"
-          alt="Instagram Logo" class=""></a></li>
+            <li><a target="_blank" href="https://www.facebook.com/irregex"><img src="/static/facebook-icon.png"
+                                                                                alt="Facebook Logo"></a></li>
+            <li><a target="_blank" href="https://www.twitter.com/irregexlearn"><img src="/static/twitter-icon.png"
+                                                                                    alt="Twitter Logo" class=""></a>
+            </li>
+            <li><a target="_blank" href="https://www.instagram.com/irregex"><img src="/static/instagram-icon.png"
+                                                                                 alt="Instagram Logo" class=""></a></li>
         </ul>
     </div>
     <div class="col-xs-12 col-sm-3 footer-copy">

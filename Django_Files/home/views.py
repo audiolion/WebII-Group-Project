@@ -41,11 +41,11 @@ def faq(request):
 @login_required(login_url='/login/')
 def dashboard(request):
     user = UserProfile.objects.get(user=request.user)
-    unfinished_lessons = Lesson.objects.all().order_by("lesson_number").exclude(id__in = user.lessons.all())
+    unfinished_lessons = Lesson.objects.all().order_by("lesson_number").exclude(id__in=user.lessons.all())
     return render(request, "dashboard.html", {
         "user": request.user,
         "profile": user,
-        "completion_percentage": (len(user.lessons.all())/float(len(Lesson.objects.all()))) * 100,
+        "completion_percentage": (len(user.lessons.all()) / float(len(Lesson.objects.all()))) * 100,
         "next": unfinished_lessons[0] if len(unfinished_lessons) > 0 else None
     })
 
@@ -65,10 +65,10 @@ def quizes(request, quizID):
                 return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
         messages.add_message(request, messages.INFO, 'Great job! You got it right!')
         user = UserProfile.objects.get(user=request.user)
-        lesson = Lesson.objects.get(pk = quiz.lesson.pk)
+        lesson = Lesson.objects.get(pk=quiz.lesson.pk)
         user.lessons.add(lesson)
         if lesson.lesson_number < 10:
-            return redirect("/lessons/"+str(lesson.lesson_number+1))
+            return redirect("/lessons/" + str(lesson.lesson_number + 1))
         else:
             return redirect("/lessons")
     else:
