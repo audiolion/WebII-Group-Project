@@ -92,6 +92,10 @@ class Lesson(Model):
         return str(self.lesson_number) + ". " + self.title
 
 
+class LanguageArticle(Model):
+    title = CharField(max_length=50)
+    text = TextField()
+
 class UserProfile(Model):
     user = OneToOneField(User)
     lessons = ManyToManyField(Lesson, null=True, default=None, blank=True)

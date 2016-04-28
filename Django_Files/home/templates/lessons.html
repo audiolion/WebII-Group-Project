@@ -18,14 +18,14 @@ IrregEx: Lessons
                 {% for each_lesson in lessons %}
                 {% if each_lesson.lesson_number = lesson.lesson_number %}
                 <li class="selected">
-                    <a id="selected" href="/lessons/{{ each_lesson.lesson_number }}/#{{ each_lesson.lesson_number }}">
+                    <a id="selected" href="/lessons/{{ each_lesson.lesson_number }}/">
                         <div class="localNavTitle">{{ each_lesson.title }}</div>
                         <p class="localNavDescription">{{ each_lesson.description }}</p>
                     </a>
                 </li>
                 {% else %}
                 <li class="not-selected">
-                    <a href="/lessons/{{ each_lesson.lesson_number }}/#{{ each_lesson.lesson_number }}">
+                    <a href="/lessons/{{ each_lesson.lesson_number }}/">
                         <div class="localNavTitle">{{ each_lesson.title }}</div>
                         <p class="localNavDescription">{{ each_lesson.description }}</p>
                     </a>
