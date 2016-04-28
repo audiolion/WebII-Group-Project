@@ -50,11 +50,11 @@ class DateSelectorWidget(MultiWidget):
 
 
 class LoginForm(Form):
-    username = CharField(label="Username", widget=TextInput(attrs={'required': 'true'}), required=True)
-    password = CharField(label="Password", widget=PasswordInput(attrs={'required': 'true'}), required=True)
+    username = CharField(label="", widget=TextInput(attrs={'required': 'true'}), required=True)
+    password = CharField(label="", widget=PasswordInput(attrs={'required': 'true'}), required=True)
 
 
 class RegisterForm(Form):
-    username = CharField(label="Username", widget=TextInput(attrs={'required': 'true'}), required=True)
-    email = CharField(label="Email", widget=EmailInput(attrs={'required': 'true'}), required=True)
-    password = CharField(label="Password", widget=PasswordInput(attrs={'required': 'true'}), required=True)
+    username = CharField(label="", widget=TextInput(attrs={'required': 'true'}), required=True)
+    email = CharField(label="", widget=EmailInput(attrs={'required': 'true'}), required=True)
+    password = CharField(label="", widget=PasswordInput(attrs={'required': 'true'}), required=True)
