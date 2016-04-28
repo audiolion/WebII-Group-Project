@@ -61,6 +61,11 @@ input[type="text"], input[type="password"], input[type="email"], textarea, selec
     margin-left: 4%;
     margin-top: -5%;
 }
+@media only screen and (max-width: 650px) {
+    .question label {
+        margin-left: 15%;
+    }
+}
 
 input[type="radio"] {
 	float: left;
