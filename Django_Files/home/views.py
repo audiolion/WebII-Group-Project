@@ -51,8 +51,8 @@ def dashboard(request):
 
 
 @login_required(login_url='/login/')
-def language_tools(request):
-    return render(request, "language_tools.html")
+def language_specific(request):
+    return render(request, "language_specific.html")
 
 
 @login_required(login_url='/login/')
