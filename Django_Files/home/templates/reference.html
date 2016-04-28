@@ -72,8 +72,9 @@ IrregEx: Reference
     <div class="reference-content col-sm-9 col-md-10">
         <h2>Quick Regex Reference</h2>
 
+        <div id="Anchors">
         <div class="material-box">
-            <h3 id="Anchors">Anchors</h3>
+            <h3>Anchors</h3>
             <ul>
                 <li>^ Start of string, or start of line in multi-line pattern</li>
                 <li>\A Start of string</li>
@@ -83,9 +84,11 @@ IrregEx: Reference
                 <li>\> End of word</li>
             </ul>
         </div>
+      </div>
 
+        <div id="CharacterClasses">
         <div class="material-box">
-            <h3 id="CharacterClasses">Character Classes</h3>
+            <h3>Character Classes</h3>
             <ul>
                 <li>\c Control character</li>
                 <li>\s White space</li>
@@ -98,9 +101,11 @@ IrregEx: Reference
                 <li>\O Octal digit</li>
             </ul>
         </div>
+      </div>
 
+        <div id="SpecialCharacters">
         <div class="material-box">
-            <h3 id="SpecialCharacters">Special Characters</h3>
+            <h3>Special Characters</h3>
             <ul>
                 <li>\n New line</li>
                 <li>\r Carriage return</li>
@@ -111,9 +116,11 @@ IrregEx: Reference
                 <li>\xhh Hex character hh</li>
             </ul>
         </div>
+      </div>
 
+        <div id="Assertions">
         <div class="material-box">
-            <h3 id="Assertions">Assertions</h3>
+            <h3>Assertions</h3>
             <ul>
                 <li>?= Lookahead assertion</li>
                 <li>?! Negative lookahead</li>
@@ -125,9 +132,11 @@ IrregEx: Reference
                 <li>?# Comment</li>
             </ul>
         </div>
+      </div>
 
+        <div id="Quantifiers">
         <div class="material-box">
-            <h3 id="Quantifiers">Quanti­fiers</h3>
+            <h3>Quanti­fiers</h3>
             <ul>
                 <li>* 0 or more</li>
                 <li>{N} Exactly N(number)</li>
@@ -137,9 +146,11 @@ IrregEx: Reference
                 <li>{3,5} 3, 4 or 5</li>
             </ul>
         </div>
+      </div>
 
+        <div id="GroupsAndRanges">
         <div class="material-box">
-            <h3 id="GroupsAndRanges">Groups and Ranges</h3>
+            <h3>Groups and Ranges</h3>
             <ul>
                 <li>. Any character except new line (\n)</li>
                 <li>(a|b) a or b</li>
@@ -153,20 +164,22 @@ IrregEx: Reference
                 <li>\x Group/­sub­pattern number "­x"</li>
             </ul>
         </div>
+      </div>
 
-
+        <div id="EscapeSequences">
         <div class="material-box">
-            <h3 id="EscapeSequences">Escape Sequences</h3>
+            <h3>Escape Sequences</h3>
             <ul>
                 <li>\ Escape following character</li>
                 <li>\Q Begin literal sequence</li>
                 <li>\E End literal sequence</li>
             </ul>
         </div>
+      </div>
 
-
+        <div id="PatternModifiers">
         <div class="material-box">
-            <h3 id="PatternModifiers">Pattern Modifiers</h3>
+            <h3>Pattern Modifiers</h3>
             <ul>
                 <li>g Global match</li>
                 <li>i * Case-i­nse­nsitive</li>
@@ -177,9 +190,11 @@ IrregEx: Reference
                 <li>U * Ungreedy pattern</li>
             </ul>
         </div>
+      </div>
 
+        <div id="StringReplacement">
         <div class="material-box">
-            <h3 id="StringReplacement">String Replac­ement</h3>
+            <h3>String Replac­ement</h3>
             <ul>
                 <li>$n nth non-pa­ssive group</li>
                 <li>$2 "­xyz­" in /^(abc­(xy­z))$/</li>
@@ -190,10 +205,11 @@ IrregEx: Reference
                 <li>$& Entire matched string</li>
             </ul>
         </div>
+      </div>
 
-
+        <div id="POSIX">
         <div class="material-box">
-            <h3 id="POSIX">POSIX</h3>
+            <h3>POSIX</h3>
             <ul>
                 <li>[:upper:] Upper case letters</li>
                 <li>[:lower:] Lower case letters</li>
@@ -210,6 +226,7 @@ IrregEx: Reference
                 <li>[:word:] Digits, letters and underscore</li>
             </ul>
         </div>
+      </div>
     </div>
 
     <a class="cd-top text-center" href="/reference/#reference-nav">Top</a>
