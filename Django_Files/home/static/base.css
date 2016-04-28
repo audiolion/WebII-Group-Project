@@ -212,6 +212,12 @@ button, input[type="submit"] {
     padding: 30px;
 }
 
+@media (max-width: 768px) {
+    .material-box {
+        margin: 15px 0;
+    }
+}
+
 /*
 ██████  ███████ ███████ ███████ ██████  ███████ ███    ██  ██████ ███████
 ██   ██ ██      ██      ██      ██   ██ ██      ████   ██ ██      ██
