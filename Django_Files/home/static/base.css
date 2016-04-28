@@ -216,6 +216,9 @@ button, input[type="submit"] {
     .material-box {
         margin: 15px 0;
     }
+    .reference-content{
+        margin: 0 auto;
+    }
 }
 
 /*
