@@ -208,16 +208,31 @@ button, input[type="submit"] {
     border-radius: 4px;
     box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
     color: rgb(87, 99, 102);
-    margin: 30px;
+    margin: 30px 0;
     padding: 30px;
+}
+
+
+.reference {
+    background-color: white;
+}
+
+.reference h1, .reference h2, .reference h3, .reference h4, .reference h5, .reference h6 {
+    color: #19BBBC;
+}
+
+.reference-content {
+    padding: 0 10rem;
 }
 
 @media (max-width: 768px) {
     .material-box {
         margin: 15px 0;
     }
-    .reference-content{
+
+    .reference-content {
         margin: 0 auto;
+        padding: 0;
     }
 }
 
@@ -379,11 +394,6 @@ button, input[type="submit"] {
 }
 
 .lesson h1, .lesson h2, .lesson h3, .lesson h4, .lesson h5, .lesson h6 {
-    color: #19BBBC;
-}
-
-.reference {
-    background-color: white;
 }
 
 .videoFrame {
