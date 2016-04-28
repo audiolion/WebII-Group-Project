@@ -16,7 +16,8 @@ body {
     left: 0;
     position: absolute;
     right: 0;
-    top: 50px;
+    top: 55px;
+    bottom: 0;
 }
 
 .body-div {
@@ -334,6 +335,10 @@ button, input[type="submit"] {
 
 #local-nav > .localNav > ul > li.selected > a {
     color: #fdfdfd;
+}
+
+.fluid-container{
+    padding: 5px 30px;
 }
 
 .selected .localNavTitle:before {
