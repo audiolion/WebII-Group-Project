@@ -14,7 +14,7 @@ urlpatterns = [
                   url(r'^forum/$', views.forum),
                   url(r'^faq/$', views.faq),
                   url(r'^dashboard/$', views.dashboard),
-                  url(r'^language_tools/$', views.language_tools),
+                  url(r'^language_specific/$', views.language_specific),
                   url(r'^about_us/$', views.about_us),
 
                   url(r'^admin/', include(admin.site.urls)),
