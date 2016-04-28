@@ -58,8 +58,13 @@ input[type="text"], input[type="password"], input[type="email"], textarea, selec
 }
 
 .question label {
-    margin-right: 3rem;
-    width: auto;
+    margin-left: 4%;
+    margin-top: -5%;
+}
+
+input[type="radio"] {
+	float: left;
+	position: absolute;
 }
 
 button, input[type="submit"] {
