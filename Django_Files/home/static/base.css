@@ -56,13 +56,31 @@ input[type="text"], input[type="password"], input[type="email"], textarea, selec
     margin-bottom: 1em;
 }
 
+#quiz_box h2 {
+    text-align: center;
+}
+	
 .question label {
     margin-left: 4%;
     margin-top: -5%;
 }
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 750px) {
     .question label {
-        margin-left: 15%;
+        margin-left: 7%;
+    }
+	
+    #quiz_box {
+	width: 130%;
+	margin-left: -20%;
+	margin-right: -50%;
+    }
+	
+    .question {
+	margin-left: 5%;
+    }
+	
+    .question h3 {
+	font-size: 140%;
     }
 }
 
