@@ -28,9 +28,10 @@ IrregEx: Dashboard
 <div class="col-xs-12 col-md-6">
     <div class="material-box">
         <h2>Badges</h2>
-        {% if user.badges %}
-        {% for badge in user.badges %}
-        {{ badge }}
+        {% if profile.badges %}
+        {% for badge in profile.badges.all %}
+        <img src="{{ badge.picture.url }}" alt="{{ badge.name }}">
+        {{ badge.name }}
         {% endfor %}
         {% else %}
         <p>You have no badges yet</p>

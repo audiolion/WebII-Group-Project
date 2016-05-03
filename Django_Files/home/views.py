@@ -71,7 +71,7 @@ def quizes(request, quizID):
         messages.add_message(request, messages.INFO, 'Great job! You got it right! Check your homepage for new badges.')
         user = UserProfile.objects.get(user=request.user)
         lesson = Lesson.objects.get(pk=quiz.lesson.pk)
-        badge = Badge.objects.get(pk=quiz.badge.pk)
+        badge = Badge.objects.get(pk=lesson.badge.pk)
         user.lessons.add(lesson)
         user.badges.add(badge)
         if lesson.lesson_number < 10:
