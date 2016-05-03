@@ -231,7 +231,7 @@ button, input[type="submit"] {
     color: #19BBBC;
 }
 
-.reference-content {
+.content-box {
     padding: 0 10rem;
 }
 
@@ -240,9 +240,9 @@ button, input[type="submit"] {
         margin: 15px 0;
     }
 
-    .reference-content {
+    .content-box {
         margin: 0 auto;
-        padding: 0;
+        padding: 0 1rem;
     }
 }
 
@@ -400,7 +400,6 @@ button, input[type="submit"] {
 
 .lesson {
     background-color: white;
-    padding: 0 10rem;
 }
 
 .lesson h1, .lesson h2, .lesson h3, .lesson h4, .lesson h5, .lesson h6 {

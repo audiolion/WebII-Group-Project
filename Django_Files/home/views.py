@@ -51,8 +51,13 @@ def dashboard(request):
 
 
 @login_required(login_url='/login/')
-def language_specific(request):
-    return render(request, "language_specific.html")
+def language_specific(request, title="Java"):
+    languages = LanguageArticle.objects.all()
+    specific_language = LanguageArticle.objects.get(title=title)
+    return render(request, "language_specific.html",{
+        "languages": languages,
+        "specific_language": specific_language
+    })
 
 
 @login_required(login_url='/login/')

@@ -15,6 +15,7 @@ urlpatterns = [
                   url(r'^faq/$', views.faq),
                   url(r'^dashboard/$', views.dashboard),
                   url(r'^language_specific/$', views.language_specific),
+                  url(r'^language_specific/(?P<title>\w+)/$', views.language_specific),
                   url(r'^about_us/$', views.about_us),
 
                   url(r'^admin/', include(admin.site.urls)),

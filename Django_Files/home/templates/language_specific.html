@@ -7,4 +7,28 @@ IrregEx: Language Specific
 {% endblock %}
 
 {% block content %}
+<div class="body-div reference row">
+    <nav id="local-nav" class="navbar navbar-default col-sm-3 col-md-2">
+        <button type="button" id="local-button" class="nav-button navbar-toggle" data-toggle="collapse"
+                data-target="#localNav">
+            <span>Show References</span>
+        </button>
+        <div class="localNav collapse navbar-collapse" id="localNav">
+            <ul class="localNav nav navbar-nav">
+                {% for language in languages %}
+                <li class="not-selected">
+                    <a href="/language_specific/{{ language.title }}">
+                        <div class="localNavTitle">{{ language.title }}</div>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </nav>
+
+    <div class="content-box col-sm-9 col-md-10">
+        {% load markup_tags %}
+        {{ specific_language.text|apply_markup:"markdown" }}
+    </div>
+</div>
 {% endblock %}
