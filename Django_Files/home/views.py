@@ -68,10 +68,12 @@ def quizes(request, quizID):
             if request.POST.get(question.question) != question.correct_answer:
                 messages.add_message(request, messages.ERROR, 'Sorry you failed. Try again')
                 return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
-        messages.add_message(request, messages.INFO, 'Great job! You got it right!')
+        messages.add_message(request, messages.INFO, 'Great job! You got it right! Check your homepage for new badges.')
         user = UserProfile.objects.get(user=request.user)
         lesson = Lesson.objects.get(pk=quiz.lesson.pk)
+        badge = Badge.objects.get(pk=quiz.badge.pk)
         user.lessons.add(lesson)
+        user.badges.add(badge)
         if lesson.lesson_number < 10:
             return redirect("/lessons/" + str(lesson.lesson_number + 1))
         else:

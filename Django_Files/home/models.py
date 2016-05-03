@@ -83,6 +83,7 @@ class Lesson(Model):
     text = TextField()
     title = CharField(max_length=50)
     quiz = OneToOneField(Quiz)
+    badge = OneToOneField(Badge, default=None, blank=True, null=True)
     description = TextField()
 
     def __str__(self):
