@@ -7,8 +7,9 @@ IrregEx: Lessons
 {% endblock %}
 
 {% block content %}
-<div class="col-xs-12">
+<div class="content-box">
     <form method="post" action="">
+	<div id="quiz_box" class="material-box">
         <h2>{{ quiz.name }}</h2>
         {% csrf_token %}
         {% for question in quiz.questions.all %}
@@ -25,6 +26,7 @@ IrregEx: Lessons
         </div>
         {% endfor %}
         <button type="submit" class="btn btn-sign">Submit</button>
+	</div>
     </form>
 </div>
 </div>
