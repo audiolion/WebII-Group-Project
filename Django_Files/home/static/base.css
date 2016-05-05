@@ -251,6 +251,7 @@ button, input[type="submit"] {
 
 .content-box {
     padding: 0 10rem;
+    padding-bottom: 4rem;
 }
 
 .irregex-badge img {
