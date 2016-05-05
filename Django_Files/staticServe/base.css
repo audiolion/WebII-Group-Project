@@ -56,13 +56,31 @@ input[type="text"], input[type="password"], input[type="email"], textarea, selec
     margin-bottom: 1em;
 }
 
+#quiz_box h2 {
+    text-align: center;
+}
+	
 .question label {
     margin-left: 4%;
     margin-top: -5%;
 }
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 750px) {
     .question label {
-        margin-left: 15%;
+        margin-left: 7%;
+    }
+	
+    #quiz_box {
+	width: 130%;
+	margin-left: -20%;
+	margin-right: -50%;
+    }
+	
+    .question {
+	margin-left: 5%;
+    }
+	
+    .question h3 {
+	font-size: 140%;
     }
 }
 
@@ -219,6 +237,7 @@ button, input[type="submit"] {
     color: rgb(87, 99, 102);
     margin: 30px 0;
     padding: 30px;
+    overflow: auto;
 }
 
 
@@ -232,6 +251,12 @@ button, input[type="submit"] {
 
 .content-box {
     padding: 0 10rem;
+    padding-bottom: 4rem;
+}
+
+.irregex-badge img {
+    margin: auto;
+    display: block;
 }
 
 @media (max-width: 768px) {
@@ -430,6 +455,12 @@ button, input[type="submit"] {
         padding: 0 .5rem;
     }
 }
+
+/* FAQ  */
+.faq h1, .faq h2, .faq h3, .faq h4, .faq h5, .faq h6 {
+    color: #19BBBC;
+}
+
 
 /*
 ███████  ██████   ██████  ████████ ███████ ██████

@@ -1,7 +1,7 @@
 import datetime
 
 from django.contrib.auth.models import User
-from django.db.models import Model
+from django.db.models import Model, ForeignKey, CASCADE
 from django.db.models.fields import IntegerField, CharField, DateField, BooleanField, TextField
 from django.db.models.fields.files import ImageField
 from django.db.models.fields.related import ManyToManyField, OneToOneField
@@ -25,8 +25,9 @@ class Goal(Model):
     remind_me = BooleanField(default=True)
 
 
-class Reply(Model):
-    user = OneToOneField(User)
+class Post(Model):
+    title = CharField(max_length="200")
+    user = ForeignKey(User, on_delete=CASCADE)
     text = TextField()
     date = DateField(default=datetime.date.today())
 
@@ -37,11 +38,10 @@ class Reply(Model):
         return u'{0}\n{1}'.format(self.user.username, self.text[:50])
 
 
-class Post(Model):
-    user = OneToOneField(User)
+class Reply(Model):
+    user = ForeignKey(User, on_delete=CASCADE)
+    post = ForeignKey(Post, on_delete=CASCADE)
     text = TextField()
-    # Upvote/Stars/Karma
-    replies = ManyToManyField(Reply)
     date = DateField(default=datetime.date.today())
 
     def __str__(self):

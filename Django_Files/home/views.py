@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 
+from .forms import *
 from .models import *
 
 
@@ -31,7 +32,47 @@ def reference(request):
 
 @login_required(login_url='/login/')
 def forum(request):
-    return render(request, "forum.html")
+    return render(request, "forum.html",{
+        "postForm": PostForm(),
+        "posts": Post.objects.all()
+    })
+
+
+@login_required(login_url="/login/")
+def post(request, post=""):
+    if request.method == "POST":
+        form = PostForm(request.POST)
+        if not form.is_valid():
+            messages.error(request, "Your post has an error please try again")
+            return redirect(request.META['HTTP_REFERER'])
+        unsaved_form = form.save(commit=False)
+        unsaved_form.user = request.user
+        unsaved_form.save()
+        return redirect(request.META['HTTP_REFERER'])
+    else:
+        if post == "":
+            return redirect(request.META['HTTP_REFERER'])
+        else:
+            post = Post.objects.get(pk=post)
+            return render(request, "post.html", {
+                "post": post,
+                "replies": Reply.objects.filter(post=post),
+                "replyForm": ReplyForm()
+            })
+
+
+@login_required(login_url="/login/")
+def add_reply(request, post):
+    post = Post.objects.get(pk=post)
+    form = ReplyForm(request.POST)
+    if not form.is_valid():
+        messages.error(request, "Your post has an error please try again")
+        return redirect(request.META['HTTP_REFERER'])
+    unsaved_form = form.save(commit=False)
+    unsaved_form.user = request.user
+    unsaved_form.post = post
+    unsaved_form.save()
+    return redirect(request.META['HTTP_REFERER'])
 
 
 def faq(request):

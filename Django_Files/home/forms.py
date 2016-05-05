@@ -1,6 +1,8 @@
 from datetime import date
 
-from django.forms import TextInput, Form, CharField, PasswordInput, EmailInput, MultiWidget, Select
+from django.forms import TextInput, Form, CharField, PasswordInput, EmailInput, MultiWidget, Select, ModelForm
+
+from .models import Reply, Post
 
 month_dict_by_name = {"January": 1, "February": 2, "March": 3, "April": 4, "May": 5, "June": 6, "July": 7, "August": 8,
                       "September": 9, "October": 10, "November": 11,
@@ -58,3 +60,15 @@ class RegisterForm(Form):
     username = CharField(label="", widget=TextInput(attrs={'required': 'true'}), required=True)
     email = CharField(label="", widget=EmailInput(attrs={'required': 'true'}), required=True)
     password = CharField(label="", widget=PasswordInput(attrs={'required': 'true'}), required=True)
+
+
+class ReplyForm(ModelForm):
+    class Meta:
+        model = Reply
+        fields = ["text"]
+
+
+class PostForm(ModelForm):
+    class Meta:
+        model = Post
+        fields = ["title", "text"]
