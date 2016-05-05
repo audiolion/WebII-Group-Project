@@ -25,22 +25,9 @@ class Goal(Model):
     remind_me = BooleanField(default=True)
 
 
-class Reply(Model):
-    user = ForeignKey(User, on_delete=CASCADE)
-    text = TextField()
-    date = DateField(default=datetime.date.today())
-
-    def __str__(self):
-        return u'{0}\n{1}'.format(self.user.username, self.text[:50])
-
-    def __unicode__(self):
-        return u'{0}\n{1}'.format(self.user.username, self.text[:50])
-
-
 class Post(Model):
     user = ForeignKey(User, on_delete=CASCADE)
     text = TextField()
-    replies = ManyToManyField(Reply, null=True, default=None, blank=True)
     date = DateField(default=datetime.date.today())
 
     def __str__(self):
@@ -49,6 +36,19 @@ class Post(Model):
     def __unicode__(self):
         return u'{0}\n{1}'.format(self.user.username, self.text[:50])
 
+
+class Reply(Model):
+    user = ForeignKey(User, on_delete=CASCADE)
+    post = ForeignKey(Post, on_delete=CASCADE)
+    text = TextField()
+    date = DateField(default=datetime.date.today())
+
+    def __str__(self):
+        return u'{0}\n{1}'.format(self.user.username, self.text[:50])
+
+    def __unicode__(self):
+        return u'{0}\n{1}'.format(self.user.username, self.text[:50])
+    
 
 class Question(Model):
     question = TextField()

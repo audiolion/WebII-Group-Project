@@ -40,25 +40,33 @@ def forum(request):
 
 
 @login_required(login_url="/login/")
-def add_post(request):
-    form = PostForm(request.POST)
-    if not form.is_valid():
-        messages.error(request, "Your post has an error please try again")
+def post(request, post=-1):
+    if request.method == "POST":
+        form = PostForm(request.POST)
+        if not form.is_valid():
+            messages.error(request, "Your post has an error please try again")
+            return redirect(request.META['HTTP_REFERER'])
+        unsaved_form = form.save(commit=False)
+        unsaved_form.user = request.user
+        unsaved_form.save()
         return redirect(request.META['HTTP_REFERER'])
-    unsaved_form = form.save(commit=False)
-    unsaved_form.user = request.user
-    unsaved_form.save()
-    return redirect(request.META['HTTP_REFERER'])
+    else:
+        if post < 0:
+            return redirect(request.META['HTTP_REFERER'])
+        else:
+            post = Post.objects.get(pk=post)
 
 
 @login_required(login_url="/login/")
-def add_reply(request):
+def add_reply(request, post):
+    post = Post.objects.get(pk=post)
     form = ReplyForm(request.POST)
     if not form.is_valid():
         messages.error(request, "Your post has an error please try again")
         return redirect(request.META['HTTP_REFERER'])
     unsaved_form = form.save(commit=False)
     unsaved_form.user = request.user
+    unsaved_form.post = post
     unsaved_form.save()
     return redirect(request.META['HTTP_REFERER'])
 

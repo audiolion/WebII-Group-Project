@@ -13,8 +13,9 @@ urlpatterns = [
                   url(r'^reference/$', views.reference),
 
                   url(r'^forum/$', views.forum),
-                  url(r'^forum/post/$', views.add_post),
-                  url(r'^forum/reply/$', views.add_reply),
+                  url(r'^forum/post/$', views.post),
+                  url(r'^forum/post/(?P<post>\w+)/$', views.post),
+                  url(r'^forum/reply/(?P<post>\w+)/$', views.add_reply),
 
                   url(r'^faq/$', views.faq),
                   url(r'^dashboard/$', views.dashboard),
