@@ -71,4 +71,4 @@ class ReplyForm(ModelForm):
 class PostForm(ModelForm):
     class Meta:
         model = Post
-        fields = ["text"]
+        fields = ["title", "text"]
