@@ -449,6 +449,7 @@ button, input[type="submit"] {
 .videoFrame {
     height: 30rem;
     width: 60%;
+    box-shadow: 4px 4px 2px #dddddd;
 }
 
 @media (max-width: 1000px) {
