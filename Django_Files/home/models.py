@@ -26,7 +26,7 @@ class Goal(Model):
 
 
 class Post(Model):
-    title = CharField(max_length="200")
+    title = CharField(max_length=200)
     user = ForeignKey(User, on_delete=CASCADE)
     text = TextField()
     date = DateField(default=datetime.date.today())
