@@ -455,6 +455,12 @@ button, input[type="submit"] {
     }
 }
 
+/* FAQ  */
+.faq h1, .faq h2, .faq h3, .faq h4, .faq h5, .faq h6 {
+    color: #19BBBC;
+}
+
+
 /*
 ███████  ██████   ██████  ████████ ███████ ██████
 ██      ██    ██ ██    ██    ██    ██      ██   ██
