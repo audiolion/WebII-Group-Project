@@ -33,14 +33,13 @@ def reference(request):
 @login_required(login_url='/login/')
 def forum(request):
     return render(request, "forum.html",{
-        "replyForm": ReplyForm(),
         "postForm": PostForm(),
         "posts": Post.objects.all()
     })
 
 
 @login_required(login_url="/login/")
-def post(request, post=-1):
+def post(request, post=""):
     if request.method == "POST":
         form = PostForm(request.POST)
         if not form.is_valid():
@@ -51,10 +50,15 @@ def post(request, post=-1):
         unsaved_form.save()
         return redirect(request.META['HTTP_REFERER'])
     else:
-        if post < 0:
+        if post == "":
             return redirect(request.META['HTTP_REFERER'])
         else:
             post = Post.objects.get(pk=post)
+            return render(request, "post.html", {
+                "post": post,
+                "replies": Reply.objects.filter(post=post),
+                "replyForm": ReplyForm()
+            })
 
 
 @login_required(login_url="/login/")

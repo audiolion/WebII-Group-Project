@@ -48,7 +48,7 @@ class Reply(Model):
 
     def __unicode__(self):
         return u'{0}\n{1}'.format(self.user.username, self.text[:50])
-    
+
 
 class Question(Model):
     question = TextField()

@@ -7,13 +7,14 @@ IrregEx: Forum
 {% endblock %}
 
 {% block content %}
-{% for post in posts %}
-    <a href="/forum/post/{{post.pk}}/">{{ post.text }}</a>
+<p>{{ post.text }}</p>
+{% for reply in replies %}
+    <p>{{ reply.text }}</p>
 {% endfor %}
 
-<form method="post" action="/forum/post/">
+<form method="post" action="/forum/reply/{{post.pk}}/">
     {% csrf_token %}
-    {{ postForm }}
+    {{ replyForm }}
     <button type="submit">Submit</button>
 </form>
 {% endblock %}
