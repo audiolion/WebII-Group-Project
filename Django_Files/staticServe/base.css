@@ -253,7 +253,7 @@ button, input[type="submit"] {
     padding: 0 10rem;
 }
 
-.badge img {
+.irregex-badge img {
     margin: auto;
     display: block;
 }
@@ -454,6 +454,12 @@ button, input[type="submit"] {
         padding: 0 .5rem;
     }
 }
+
+/* FAQ  */
+.faq h1, .faq h2, .faq h3, .faq h4, .faq h5, .faq h6 {
+    color: #19BBBC;
+}
+
 
 /*
 ███████  ██████   ██████  ████████ ███████ ██████

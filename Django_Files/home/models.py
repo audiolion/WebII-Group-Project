@@ -1,7 +1,7 @@
 import datetime
 
 from django.contrib.auth.models import User
-from django.db.models import Model
+from django.db.models import Model, ForeignKey, CASCADE
 from django.db.models.fields import IntegerField, CharField, DateField, BooleanField, TextField
 from django.db.models.fields.files import ImageField
 from django.db.models.fields.related import ManyToManyField, OneToOneField
@@ -26,7 +26,7 @@ class Goal(Model):
 
 
 class Reply(Model):
-    user = OneToOneField(User)
+    user = ForeignKey(User, on_delete=CASCADE)
     text = TextField()
     date = DateField(default=datetime.date.today())
 
@@ -38,10 +38,9 @@ class Reply(Model):
 
 
 class Post(Model):
-    user = OneToOneField(User)
+    user = ForeignKey(User, on_delete=CASCADE)
     text = TextField()
-    # Upvote/Stars/Karma
-    replies = ManyToManyField(Reply)
+    replies = ManyToManyField(Reply, null=True, default=None, blank=True)
     date = DateField(default=datetime.date.today())
 
     def __str__(self):

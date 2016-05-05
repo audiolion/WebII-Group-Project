@@ -11,7 +11,11 @@ urlpatterns = [
                   url(r'^lessons/(?P<lesson_number>\w+)/$', views.lessons),
                   url(r'^quiz/(?P<quizID>\w+)/$', views.quizes),
                   url(r'^reference/$', views.reference),
+
                   url(r'^forum/$', views.forum),
+                  url(r'^forum/post/$', views.add_post),
+                  url(r'^forum/reply/$', views.add_reply),
+
                   url(r'^faq/$', views.faq),
                   url(r'^dashboard/$', views.dashboard),
                   url(r'^language_specific/$', views.language_specific),
