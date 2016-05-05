@@ -30,8 +30,9 @@ IrregEx: Dashboard
         <h2>Badges</h2>
         {% if profile.badges %}
         {% for badge in profile.badges.all %}
-        <img src="{{ badge.picture.url }}" alt="{{ badge.name }}">
-        {{ badge.name }}
+        <div class="col-xs-6 col-sm-3 col-md-2  irregex-badge">
+            <img src="{{ badge.picture.url }}" alt="{{ badge.name }}">
+        </div>
         {% endfor %}
         {% else %}
         <p>You have no badges yet</p>
