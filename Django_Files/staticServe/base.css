@@ -214,7 +214,6 @@ button, input[type="submit"] {
 
 .btn {
     font-size: 2rem;
-    margin: 1rem 0;
 }
 
 .btn-sign {
@@ -252,6 +251,16 @@ button, input[type="submit"] {
 .content-box {
     padding: 0 10rem;
     padding-bottom: 4rem;
+}
+
+/* Forum  */
+.forum-posts h1, .forum-posts h2, .forum-posts h3, .forum-posts h4, .forum-posts h5, .forum-posts h6 {
+    color: #19BBBC;
+}
+
+.forum-posts .material-box {
+    width: 700px;
+    margin: 20px auto;
 }
 
 .irregex-badge img {

@@ -12,7 +12,7 @@ IrregEx: Forum
     <p>{{ reply.text }}</p>
 {% endfor %}
 
-<form method="post" action="/forum/reply/{{post.pk}}/">
+<form method="post" action="/forum/reply/{{post.pk}}/" class="material-box col-xs-12 col-sm-10 col-sm-offset-1">
     {% csrf_token %}
     {{ replyForm }}
     <button type="submit" class="btn-sign center-block btn">Submit</button>

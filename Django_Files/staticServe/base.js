@@ -2,12 +2,7 @@
  * Created by Ricky on 3/14/2016.
  */
 $(function() {
-  $('#id_username').addClass('form-control');
-  $('#id_username').attr('placeholder', 'Username');
-  $('#id_email').addClass('form-control');
-  $('#id_email').attr('placeholder', 'Email');
-  $('#id_password').addClass('form-control');
-  $('#id_password').attr('placeholder', 'Password');
+  
 });
 /* CODE IS ATTRIBUTED TO CLAUDIA ROMANO at https://codyhouse.co/gem/back-to-top/ */
 jQuery(document).ready(function ($) {
