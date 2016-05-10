@@ -288,6 +288,10 @@ button, input[type="submit"] {
 }
 .progress-bar {
     line-height: 30px;
+    background-color: #f6de89;
+    /*color: #17bcbc;*/
+    font-family: "Source Sans Pro Extra Light";
+    font-size: 24pt;
 }
 
 @media (max-width: 768px) {
