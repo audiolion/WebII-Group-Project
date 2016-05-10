@@ -32,27 +32,33 @@ IrregEx: Dashboard
     <div class="material-box">
         <h2>Badges</h2>
         {% if profile.badges %}
-        {% for badge in profile.badges.all %}
-        <div class="col-xs-6 col-sm-3 col-md-2  irregex-badge">
-            <img src="{{ badge.picture.url }}" alt="{{ badge.name }}">
-        </div>
-        {% endfor %}
+            {% for badge in profile.badges.all %}
+                <div class="col-xs-6 col-sm-3 col-md-2  irregex-badge">
+                    <img src="{{ badge.picture.url }}" alt="{{ badge.name }}">
+                </div>
+            {% endfor %}
         {% else %}
-        <p>You have no badges yet</p>
+            <p>You have no badges yet</p>
         {% endif %}
     </div>
+</div>
 
-    <div class="col-xs-12">
-        <div class="material-box">
-            <h2>Forum Posts</h2>
-            {% if user.posts %}
-            {% for post in user.posts %}
-            {{ post }}
+<div class="col-xs-12">
+    <div class="material-box">
+        <h2>Forum Posts</h2>
+        {% if profile.posts %}
+            {% for post in profile.posts.all %}
+                <div class="col-xs-12 col-md-6">
+                    <h2>{{post.title}}</h2>
+                    <p>Submitted: {{post.date}}</p>
+                    <p>{{ post.text }}</p>
+                    <p>Submitted by: {{post.user.username}}</p>
+                    <a href="/forum/post/{{post.pk}}/">View More</a>
+                </div>
             {% endfor %}
-            {% else %}
+        {% else %}
             <p>You have no posts yet</p>
-            {% endif %}
-        </div>
+        {% endif %}
     </div>
 </div>
 

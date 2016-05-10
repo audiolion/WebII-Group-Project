@@ -48,6 +48,8 @@ def post(request, post=""):
         unsaved_form = form.save(commit=False)
         unsaved_form.user = request.user
         unsaved_form.save()
+        profile = UserProfile.objects.get(user=request.user)
+        profile.posts.add(unsaved_form)
         return redirect(request.META['HTTP_REFERER'])
     else:
         if post == "":
