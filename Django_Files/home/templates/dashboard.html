@@ -34,6 +34,7 @@ IrregEx: Dashboard
             {% for badge in profile.badges.all %}
                 <div class="col-xs-6 col-sm-3 col-md-2  irregex-badge">
                     <img src="{{ badge.picture.url }}" alt="{{ badge.name }}">
+                    <p>{{ badge.description }}</p>
                 </div>
             {% endfor %}
         {% else %}

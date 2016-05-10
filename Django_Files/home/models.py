@@ -10,6 +10,7 @@ from django.db.models.fields.related import ManyToManyField, OneToOneField
 class Badge(Model):
     name = CharField(max_length=50)
     picture = ImageField()
+    description = CharField(max_length=200, default="Test")
 
     def __str__(self):
         return self.name
@@ -96,6 +97,13 @@ class Lesson(Model):
 class LanguageArticle(Model):
     title = CharField(max_length=50)
     text = TextField()
+
+    def __str__(self):
+        return self.title
+
+    def __unicode__(self):
+        return self.title
+
 
 class UserProfile(Model):
     user = OneToOneField(User)
