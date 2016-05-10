@@ -18,6 +18,6 @@ IrregEx: Forum
 <form method="post" action="/forum/post/">
     {% csrf_token %}
     {{ postForm }}
-    <button type="submit">Submit</button>
+    <button type="submit" class="btn-sign center-block btn">Submit</button>
 </form>
 {% endblock %}

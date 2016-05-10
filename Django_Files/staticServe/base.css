@@ -173,7 +173,7 @@ button, input[type="submit"] {
 }
 
 .close_msg_btn {
-    background-color: #ff4d4d;
+    background-color: #757575;
     border: none;
     border-radius: 22px;
     color: white;
@@ -185,7 +185,7 @@ button, input[type="submit"] {
 }
 
 .close_msg_btn:hover {
-    background-color: #ff3333;
+    background-color: #c2c2a3;
 }
 
 .msg_icon {

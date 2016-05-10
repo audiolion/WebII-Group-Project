@@ -1,6 +1,7 @@
 from datetime import date
 
-from django.forms import TextInput, Form, CharField, PasswordInput, EmailInput, MultiWidget, Select, ModelForm
+from django.db.models.fields import TextField
+from django.forms import TextInput, Form, CharField, PasswordInput, EmailInput, MultiWidget, Select, ModelForm, Textarea
 
 from .models import Reply, Post
 
@@ -52,23 +53,58 @@ class DateSelectorWidget(MultiWidget):
 
 
 class LoginForm(Form):
-    username = CharField(label="", widget=TextInput(attrs={'required': 'true'}), required=True)
-    password = CharField(label="", widget=PasswordInput(attrs={'required': 'true'}), required=True)
+    username = CharField(label="", widget=TextInput(attrs={
+        'required': 'true',
+        'placeholder': "Username",
+        "class": "form-control"
+    }), required=True)
+    password = CharField(label="", widget=PasswordInput(attrs={
+        'required': 'true',
+        'placeholder': "Password",
+        "class": "form-control"
+    }), required=True)
 
 
 class RegisterForm(Form):
-    username = CharField(label="", widget=TextInput(attrs={'required': 'true'}), required=True)
-    email = CharField(label="", widget=EmailInput(attrs={'required': 'true'}), required=True)
-    password = CharField(label="", widget=PasswordInput(attrs={'required': 'true'}), required=True)
+    username = CharField(label="", widget=TextInput(attrs={
+        'required': 'true',
+        'placeholder': "Username",
+        "class": "form-control"
+    }), required=True)
+    email = CharField(label="", widget=EmailInput(attrs={
+        'required': 'true',
+        'placeholder': "Email",
+        "class": "form-control"
+    }), required=True)
+    password = CharField(label="", widget=PasswordInput(attrs={
+        'required': 'true',
+        'placeholder': "Password",
+        "class": "form-control"
+    }), required=True)
 
 
 class ReplyForm(ModelForm):
+    text = CharField(widget=Textarea(attrs={
+        'required': 'true',
+        'placeholder': "Reply",
+        "class": "form-control"
+    }))
     class Meta:
         model = Reply
         fields = ["text"]
 
 
 class PostForm(ModelForm):
+    title = CharField(label="Title", widget=PasswordInput(attrs={
+        'required': 'true',
+        'placeholder': "Title",
+        "class": "form-control"
+    }))
+    text = CharField(widget=Textarea(attrs={
+        'required': 'true',
+        'placeholder': "Reply",
+        "class": "form-control"
+    }))
     class Meta:
         model = Post
         fields = ["title", "text"]
