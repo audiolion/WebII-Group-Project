@@ -263,10 +263,20 @@ button, input[type="submit"] {
     margin: 60px;
 }
 
+.irregex-badge {
+    text-align: center;
+}
+
+.irregex-badge p {
+    font-size: 75%;
+}
+
 .irregex-badge img {
     margin: auto;
     display: block;
+    padding-left: 7%;
 }
+
 
 .dashboard h1, .dashboard h2, .dashboard h3, .dashboard h4, .dashboard h5, .dashboard h6 {
     color: #19BBBC;
