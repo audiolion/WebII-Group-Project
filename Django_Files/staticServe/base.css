@@ -259,6 +259,18 @@ button, input[type="submit"] {
     display: block;
 }
 
+.dashboard h1, .dashboard h2, .dashboard h3, .dashboard h4, .dashboard h5, .dashboard h6 {
+    color: #19BBBC;
+}
+
+.progress {
+    margin-top: 2rem;
+    height: 30px;
+}
+.progress-bar {
+    line-height: 30px;
+}
+
 @media (max-width: 768px) {
     .material-box {
         margin: 15px 0;
@@ -391,6 +403,10 @@ button, input[type="submit"] {
     width: 100%;
 }
 
+.localNav li {
+    width: 100%;
+}
+
 #local-nav > .localNav > ul > li.selected > a {
     color: #fdfdfd;
 }
@@ -437,6 +453,7 @@ button, input[type="submit"] {
 .videoFrame {
     height: 30rem;
     width: 60%;
+    box-shadow: 4px 4px 2px #dddddd;
 }
 
 @media (max-width: 1000px) {
@@ -461,7 +478,9 @@ button, input[type="submit"] {
     color: #19BBBC;
 }
 
-
+.faq .material-box {
+    margin: 60px;
+}
 /*
 ███████  ██████   ██████  ████████ ███████ ██████
 ██      ██    ██ ██    ██    ██    ██      ██   ██
@@ -507,6 +526,18 @@ footer ul {
 footer .col-xs-6 {
     margin: 0;
     padding: 1rem 0;
+}
+
+footer a:link, footer a:visited{
+    color: white;
+    text-decoration: none;
+    font-style: italic;
+    font-weight:lighter;
+}
+
+footer ul ul li {
+    font-style: italic;
+    font-weight:lighter;
 }
 
 @media (max-width: 600px) {

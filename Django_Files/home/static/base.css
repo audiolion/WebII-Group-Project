@@ -403,6 +403,10 @@ button, input[type="submit"] {
     width: 100%;
 }
 
+.localNav li {
+    width: 100%;
+}
+
 #local-nav > .localNav > ul > li.selected > a {
     color: #fdfdfd;
 }
