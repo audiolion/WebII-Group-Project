@@ -7,10 +7,21 @@ IrregEx: Forum
 {% endblock %}
 
 {% block content %}
-<p>{{ post.text }}</p>
-{% for reply in replies %}
-    <p>{{ reply.text }}</p>
-{% endfor %}
+<div class="col-xs-12 forum-posts">
+    <div class="material-box">
+        <h2>{{post.title}}</h2>
+        <p>Submitted: {{post.date}}</p>
+        <p>{{ post.text }}</p>
+        <p>Submitted by: {{post.user.username}}</p>
+    </div>
+    {% for reply in replies %}
+        <div class="material-box">
+            <p class="">{{ reply.text }}</p>
+            <p>Submitted: {{reply.date}}</p>
+            <p class="">Submitted by: {{ reply.user.username }}</p>
+        </div>
+    {% endfor %}
+</div>
 
 <form method="post" action="/forum/reply/{{post.pk}}/" class="material-box col-xs-12 col-sm-10 col-sm-offset-1">
     {% csrf_token %}

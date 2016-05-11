@@ -263,10 +263,20 @@ button, input[type="submit"] {
     margin: 60px;
 }
 
+.irregex-badge {
+    text-align: center;
+}
+
+.irregex-badge p {
+    font-size: 75%;
+}
+
 .irregex-badge img {
     margin: auto;
     display: block;
+    padding-left: 7%;
 }
+
 
 .dashboard h1, .dashboard h2, .dashboard h3, .dashboard h4, .dashboard h5, .dashboard h6 {
     color: #19BBBC;
@@ -278,6 +288,10 @@ button, input[type="submit"] {
 }
 .progress-bar {
     line-height: 30px;
+    background-color: #f6de89;
+    /*color: #17bcbc;*/
+    font-family: "Source Sans Pro Extra Light";
+    font-size: 24pt;
 }
 
 @media (max-width: 768px) {
