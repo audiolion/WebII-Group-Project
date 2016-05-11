@@ -1,4 +1,4 @@
-Django==1.7.11
+Django
 pillow
 psycopg2
 django-markup
