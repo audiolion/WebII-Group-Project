@@ -95,7 +95,7 @@ class ReplyForm(ModelForm):
 
 
 class PostForm(ModelForm):
-    title = CharField(label="Title", widget=PasswordInput(attrs={
+    title = CharField(label="Title", widget=TextInput(attrs={
         'required': 'true',
         'placeholder': "Title",
         "class": "form-control"
