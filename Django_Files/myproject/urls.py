@@ -11,6 +11,7 @@ urlpatterns = [
                   url(r'^lessons/(?P<lesson_number>\w+)/$', views.lessons),
                   url(r'^quiz/(?P<quizID>\w+)/$', views.quizes),
                   url(r'^reference/$', views.reference),
+                  url(r'^meet_the_team/$', views.meet_the_team),
 
                   url(r'^forum/$', views.forum),
                   url(r'^forum/post/$', views.post),

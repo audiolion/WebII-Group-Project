@@ -81,6 +81,10 @@ def faq(request):
     return render(request, "faq.html")
 
 
+def meet_the_team(request):
+    return render(request, "meet_the_team.html")
+
+
 @login_required(login_url='/login/')
 def dashboard(request):
     user = UserProfile.objects.get(user=request.user)

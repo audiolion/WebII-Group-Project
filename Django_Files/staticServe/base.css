@@ -194,6 +194,11 @@ button, input[type="submit"] {
     margin-right: auto;
 }
 
+.meetTheTeam img {
+    display: block;
+    margin: auto;
+}
+
 /*
 ███████ ██████  ██       █████  ███████ ██   ██     ██████   █████   ██████  ███████
 ██      ██   ██ ██      ██   ██ ██      ██   ██     ██   ██ ██   ██ ██       ██
