@@ -196,6 +196,7 @@ button, input[type="submit"] {
 
 .meetTheTeam img {
     display: block;
+    padding: 1rem;
     margin: auto;
 }
 
